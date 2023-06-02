@@ -1,7 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "description": "testtesttest",
+  "short_name": "홍찬기",
+  "name": "홍찬기 - 프론트앤드 개발 포트폴리오",
+  "description": "프론트앤드 개발 포트폴리오입니다. 이 사이트에서는 다양한 프로젝트와 기술적 역량을 확인할  있습니다.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -23,5 +23,5 @@
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#000000"
 }

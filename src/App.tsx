@@ -1,17 +1,20 @@
 import React from 'react';
 import { Reset } from 'styled-reset';
-import './style/App.css';
+import './style/App.scss';
+import { Routes, Route } from 'react-router-dom';
+import Home from './page/Home';
+import Header from './component/Header';
+import Footer from './component/Footer';
 
 function App() {
   return (
     <>
       <Reset />
-      <div className='App'>
-        <header className='App-header'>
-          <img src='/img/profile.png' className='App-logo' alt='logo' />
-          <p>홍찬기의 포트폴리오</p>
-        </header>
-      </div>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+      <Footer />
     </>
   );
 }
