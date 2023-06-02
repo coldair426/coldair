@@ -1,0 +1,9 @@
+// 반응형 분기점
+$mobile: 832px;
+
+// 833px 이상일 때,
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}

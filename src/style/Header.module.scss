@@ -1,0 +1,34 @@
+@import '_utilities.scss';
+
+.header__global-navigation {
+  display: flex;
+  justify-content: center;
+  .header__global-navigation--contents {
+    height: 44px;
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobile {
+      height: 48px;
+    }
+    .header__global-navigation--logo {
+      width: 14px;
+      height: 14px;
+      @include mobile {
+        width: 17px;
+        height: 17px;
+      }
+    }
+    .header__global-navigation--contents-wrapper {
+    }
+  }
+}
+
+.header__local-navigation {
+  height: 66px;
+  @include mobile {
+    height: 63px;
+  }
+}
