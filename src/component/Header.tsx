@@ -1,13 +1,43 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from '../style/Header.module.scss';
 import classNames from 'classnames/bind';
 
 const hs = classNames.bind(styles);
 
 function Header() {
+  const header = useRef<HTMLElement | null>(null);
+  const headerLocalNavigation = useRef<HTMLElement | null>(null);
+  const headerLocalNavigationContents = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const test = () => {
+      if (header.current && headerLocalNavigation.current && headerLocalNavigationContents.current) {
+        if (window.scrollY >= header.current.offsetHeight) {
+          header.current.style.transition = 'background-color 1s ease';
+          headerLocalNavigation.current.style.transition = 'background-color 1s ease';
+          headerLocalNavigationContents.current.style.boxShadow = 'none';
+          headerLocalNavigation.current.style.boxShadow = '0px 0.5px 0px 0px rgba(255, 255, 255, 0.24)';
+          header.current.style.backgroundColor = 'rgba(29, 29, 31, 0.9)';
+          headerLocalNavigation.current.style.backgroundColor = 'rgba(29, 29, 31, 0.9)';
+        } else {
+          header.current.style.transition = 'background-color 1s ease';
+          headerLocalNavigation.current.style.transition = 'background-color 1s ease';
+          headerLocalNavigationContents.current.style.boxShadow = '0px 0.5px 0px 0px rgba(255, 255, 255, 0.24)';
+          headerLocalNavigation.current.style.boxShadow = 'none';
+          header.current.style.backgroundColor = 'transparent';
+          headerLocalNavigation.current.style.backgroundColor = 'transparent';
+        }
+      }
+    };
+    window.addEventListener('scroll', test);
+    return () => {
+      window.removeEventListener('scroll', test);
+    };
+  }, []);
+
   return (
     <>
-      <header className={hs('header')}>
+      <header className={hs('header')} ref={header}>
         <nav className={hs('header__global-navigation')}>
           <div className={hs('header__global-navigation--contents')}>
             <img className={hs('header__global-navigation--logo')} src='/logo192.png' alt='logo' />
@@ -23,8 +53,8 @@ function Header() {
           </div>
         </nav>
       </header>
-      <nav className={hs('header__local-navigation')}>
-        <div className={hs('header__local-navigation--contents')}>
+      <nav className={hs('header__local-navigation')} ref={headerLocalNavigation}>
+        <div className={hs('header__local-navigation--contents')} ref={headerLocalNavigationContents}>
           <div>
             <div className={hs('header__local-navigation--sub-title')}>Front-End Dev</div>
             <div className={hs('header__local-navigation--title')}>홍찬기</div>
