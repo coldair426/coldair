@@ -17,14 +17,16 @@ function Header() {
               <a href='https://open.kakao.com/o/s7ZC0Rnf'>카카오톡</a>
               <a href='mailto:coldair426@gmail.com'>Gmail</a>
             </div>
-            <button className={hs('header__global-navigation--menu-button', 'hidden-on-desktop')}>ㅁ</button>
+            <button className={hs('header__global-navigation--menu-button', 'hidden-on-desktop')}>
+              <img src='/icon/header-menu-button.png' alt='menu-open-button' />
+            </button>
           </div>
         </nav>
       </header>
       <nav className={hs('header__local-navigation')}>
         <div className={hs('header__local-navigation--contents')}>
           <div>
-            <div className={hs('header__local-navigation--sub-title')}>Front-End Developer</div>
+            <div className={hs('header__local-navigation--sub-title')}>Front-End Dev</div>
             <div className={hs('header__local-navigation--title')}>홍찬기</div>
           </div>
           <div className={hs('header__local-navigation--contents-wrapper')}>
