@@ -25,14 +25,18 @@
     }
     .header__global-navigation--contents-wrapper {
       display: flex;
+      a + a {
+        margin-left: 90px;
+        @include mobile {
+          margin-left: 0px;
+        }
+      }
       & > a {
         color: $본문글씨;
         letter-spacing: 1px;
         text-align: center;
         font-size: 12px;
-        font-weight: 900;
-        width: 90px;
-        margin: 0 20px;
+        width: 70px;
         @include mobile {
           width: 1px;
         }
@@ -63,7 +67,7 @@
     max-width: 980px;
     margin: 0 22px;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-between;
     // border-bottom: 0.1px solid $본문글씨;
     box-shadow: 0px 0.5px 0px 0px rgba(161, 161, 166, 0.61);
@@ -92,11 +96,13 @@
     }
     .header__local-navigation--contents-wrapper {
       display: flex;
+      div + div {
+        margin-left: 20px;
+      }
       & > div {
         text-align: right;
         font-size: 12px;
         letter-spacing: 1px;
-        width: 90px;
         margin-bottom: 12px;
       }
     }
