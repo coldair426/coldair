@@ -5,7 +5,7 @@ import classNames from 'classnames/bind';
 const hs = classNames.bind(styles);
 
 function Home() {
-  return <div className={hs('home')}>홈입니다</div>;
+  return <div className={hs('home')}></div>;
 }
 
 export default Home;

@@ -6,12 +6,14 @@
   .header__global-navigation--contents {
     height: 44px;
     width: 100%;
-    max-width: 1024px;
+    max-width: 980px;
+    padding: 0 22px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     @include mobile {
       height: 48px;
+      padding: 0 16px;
     }
     .header__global-navigation--logo {
       width: 14px;
@@ -22,13 +24,75 @@
       }
     }
     .header__global-navigation--contents-wrapper {
+      display: flex;
+      & > a {
+        color: $본문글씨;
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 900;
+        width: 90px;
+        margin: 0 20px;
+        @include mobile {
+          width: 1px;
+        }
+      }
+    }
+    .header__global-navigation--menu-button {
+      width: 14px;
+      @include mobile {
+        width: 17px;
+      }
     }
   }
 }
 
 .header__local-navigation {
-  height: 66px;
-  @include mobile {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
+  .header__local-navigation--contents {
     height: 63px;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 22px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    // border-bottom: 0.1px solid $본문글씨;
+    box-shadow: 0px 0.5px 0px 0px rgba(161, 161, 166, 0.61);
+    @include mobile {
+      height: 60px;
+      margin: 0 0px;
+      padding: 0 16px;
+    }
+    .header__local-navigation--sub-title {
+      font-size: 12px;
+      opacity: 0.61;
+      margin-bottom: 5px;
+      @include mobile {
+        font-size: 11.3px;
+      }
+    }
+    .header__local-navigation--title {
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: 28.5px;
+      margin-bottom: 12px;
+      @include mobile {
+        font-size: 19px;
+      }
+    }
+    .header__local-navigation--contents-wrapper {
+      display: flex;
+      & > div {
+        text-align: right;
+        font-size: 12px;
+        letter-spacing: 1px;
+        width: 90px;
+        margin-bottom: 12px;
+      }
+    }
   }
 }

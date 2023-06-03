@@ -16,6 +16,7 @@ a,
 a:link,
 a:visited {
   color: inherit; // color를 부모로 부터 상속
+  text-decoration: none;
 }
 /* button 속성 초기화 */
 button {

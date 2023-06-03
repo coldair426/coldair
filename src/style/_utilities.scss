@@ -1,9 +1,31 @@
+// 색상
+$기본배경: #000000;
+$제목글씨: #f5f5f7;
+$본문글씨: #a1a1a6;
+$로고배경: #87cbb9;
+$로고글씨채우기: #7deddd;
+$로고글씨채우기2: #57afdf;
+$로고글씨윤곽선: #31334b;
+
 // 반응형 분기점
 $mobile: 832px;
+$desktop: 833px;
 
-// 833px 이상일 때,
+// 832px 이하일 때,
 @mixin mobile {
   @media (max-width: $mobile) {
     @content;
+  }
+}
+// 모바일에서 숨기기 속성
+.hidden-on-mobile {
+  @media (max-width: $mobile) {
+    visibility: hidden;
+  }
+}
+// 데스크탑에서 숨기기 속성
+.hidden-on-desktop {
+  @media (min-width: $desktop) {
+    visibility: hidden;
   }
 }
