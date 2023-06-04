@@ -7,11 +7,13 @@
   height: 0;
   width: 100%;
   z-index: 90;
-  transition: height 0.32s;
+  opacity: 0;
+  transition: height 0.32s, opacity 0.32s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 }
 .menu-box__mask.visible {
   height: 100vh;
+  opacity: 1;
 }
 
 .menu-box {
@@ -21,7 +23,7 @@
   height: 100vh;
   z-index: 100;
   opacity: 0;
-  transition: opacity 0.32s;
+  transition: opacity 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
 }
 .menu-box.visible {

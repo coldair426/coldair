@@ -16,18 +16,14 @@ function Header({ setMenuBoxVisible }: { setMenuBoxVisible: React.Dispatch<React
   };
 
   useEffect(() => {
-    const test = () => {
+    const headerStyleChange = () => {
       if (header.current && headerLocalNavigation.current && headerLocalNavigationContents.current) {
         if (window.scrollY >= header.current.offsetHeight) {
-          header.current.style.transition = 'background-color 1s ease';
-          headerLocalNavigation.current.style.transition = 'background-color 1s ease';
           headerLocalNavigationContents.current.style.boxShadow = 'none';
           headerLocalNavigation.current.style.boxShadow = '0px 1px 0px 0px rgba(255, 255, 255, 0.24)';
           header.current.style.backgroundColor = 'rgba(29, 29, 31, 0.9)';
           headerLocalNavigation.current.style.backgroundColor = 'rgba(29, 29, 31, 0.9)';
         } else {
-          header.current.style.transition = 'background-color 1s ease';
-          headerLocalNavigation.current.style.transition = 'background-color 1s ease';
           headerLocalNavigationContents.current.style.boxShadow = '0px 1px 0px 0px rgba(255, 255, 255, 0.24)';
           headerLocalNavigation.current.style.boxShadow = 'none';
           header.current.style.backgroundColor = 'transparent';
@@ -35,9 +31,9 @@ function Header({ setMenuBoxVisible }: { setMenuBoxVisible: React.Dispatch<React
         }
       }
     };
-    window.addEventListener('scroll', test);
+    window.addEventListener('scroll', headerStyleChange);
     return () => {
-      window.removeEventListener('scroll', test);
+      window.removeEventListener('scroll', headerStyleChange);
     };
   }, []);
 
