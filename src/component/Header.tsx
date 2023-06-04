@@ -74,8 +74,15 @@ function Header({ setMenuBoxVisible }: { setMenuBoxVisible: React.Dispatch<React
             </div>
           </button>
           <div className={hs('header__local-navigation--contents-wrapper')}>
-            <div>소개</div>
-            <div>프로젝트</div>
+            <button>
+              <div>개요</div>
+            </button>
+            <button>
+              <div>스택</div>
+            </button>
+            <button>
+              <div>프로젝트</div>
+            </button>
           </div>
         </div>
       </nav>

@@ -116,14 +116,19 @@
     }
     .header__local-navigation--contents-wrapper {
       display: flex;
-      div + div {
+      button + button {
         margin-left: 20px;
       }
-      & > div {
+      & > button > div {
+        opacity: 0.61;
         text-align: right;
         font-size: 12px;
         letter-spacing: 1px;
         margin-bottom: 12px;
+        &:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
       }
     }
   }
