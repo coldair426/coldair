@@ -10,7 +10,7 @@
     position: fixed;
     opacity: 0;
     width: 250px;
-    transition: width 1s, opacity 1s;
+    transition: width 0.5s, opacity 0.5s;
     transition-timing-function: ease;
   }
   .home__profile--img {
@@ -21,6 +21,6 @@
     transition-timing-function: ease;
   }
 }
-.home__hello-place-holder {
+.home__hello--place-holder {
   width: 100%;
 }
