@@ -10,20 +10,19 @@
   .home__hello--img {
     position: fixed;
     opacity: 0;
-    width: 400px;
+    width: 21vw;
     transition: width 0.5s, opacity 0.5s;
     transition-timing-function: ease;
   }
   .home__hello--img.active-one {
     opacity: 1;
-    width: 400px;
+    width: 21vw;
   }
   .home__hello--img.active-two {
     opacity: 1;
-    width: 1300px;
+    width: 68vw;
   }
   .home__hello--intro {
-    width: 1100px;
     position: fixed;
     opacity: 0;
     display: flex;
@@ -33,10 +32,10 @@
     transition: bottom 0.5s, opacity 0.5s;
     transition-timing-function: ease;
     .home__hello--intro-frontend {
-      width: 400px;
+      height: 26vh;
     }
     .home__hello--intro-name {
-      width: 400px;
+      height: 26vh;
     }
   }
   .home__hello--intro.active {
@@ -45,7 +44,7 @@
   .home__profile--img {
     position: fixed;
     bottom: 0;
-    width: 1100px;
+    height: 90vh;
     opacity: 0;
     transition: opacity 0.7s;
     transition-timing-function: ease;

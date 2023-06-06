@@ -20,24 +20,28 @@ function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNav
         const helloHeight = headerGlobalNavHeight + headerLocalNavHeight + hello.current.offsetHeight - window.innerHeight; // hello컴포넌트가 끝나는 지점까지의 스크롤롤 높이
         if (window.scrollY < helloHeight * 0.1) {
           helloImg.current.style.top = `${(window.innerHeight - helloImg.current.offsetHeight) / 2}px`;
+          intro.current.style.width = `${profileImg.current.offsetWidth}px`;
           intro.current.style.bottom = `-${intro.current.offsetHeight}px`;
           setHelloImgStyleTag('active-one');
           setProfileImgStyleTag(undefined);
           setIntroStyleTag(undefined);
         } else if (window.scrollY >= helloHeight * 0.1 && window.scrollY < helloHeight * 0.4) {
           helloImg.current.style.top = `${(window.innerHeight - helloImg.current.offsetHeight) / 2}px`;
+          intro.current.style.width = `${profileImg.current.offsetWidth}px`;
           intro.current.style.bottom = `-${intro.current.offsetHeight}px`;
           setHelloImgStyleTag('active-two');
           setProfileImgStyleTag(undefined);
           setIntroStyleTag(undefined);
         } else if (window.scrollY >= helloHeight * 0.4 && window.scrollY < helloHeight) {
           helloImg.current.style.top = `${(window.innerHeight - helloImg.current.offsetHeight) / 2}px`;
+          intro.current.style.width = `${profileImg.current.offsetWidth}px`;
           intro.current.style.bottom = `${profileImg.current.offsetHeight * 0.6}px`;
           setHelloImgStyleTag(undefined);
           setProfileImgStyleTag('active');
           setIntroStyleTag('active');
         } else if (window.scrollY >= helloHeight) {
           helloImg.current.style.top = `${(window.innerHeight - helloImg.current.offsetHeight) / 2}px`;
+          intro.current.style.width = `${profileImg.current.offsetWidth}px`;
           intro.current.style.bottom = `-${intro.current.offsetHeight}px`;
           setHelloImgStyleTag(undefined);
           setProfileImgStyleTag(undefined);
@@ -61,7 +65,7 @@ function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNav
             <img className={hs('home__hello--intro-frontend')} src='/img/frontend.png' alt='front-end-dev' />
             <img className={hs('home__hello--intro-name')} src='/img/name.png' alt='my-name-chanki' />
           </div>
-          <img className={hs('home__profile--img', profileImgStyleTag)} ref={profileImg} src='/img/Home__profile.png' alt='profile-of-me' />
+          <img className={hs('home__profile--img', profileImgStyleTag)} ref={profileImg} src='/img/profile.png' alt='profile-of-me' />
         </div>
       </div>
     </>
