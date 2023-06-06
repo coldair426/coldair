@@ -25,14 +25,14 @@ function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNav
           setHelloImgStyleTag('active-one');
           setProfileImgStyleTag(undefined);
           setIntroStyleTag(undefined);
-        } else if (window.scrollY >= helloHeight * 0.1 && window.scrollY < helloHeight * 0.4) {
+        } else if (window.scrollY >= helloHeight * 0.1 && window.scrollY < helloHeight * 0.5) {
           helloImg.current.style.top = `${(window.innerHeight - helloImg.current.offsetHeight) / 2}px`;
           intro.current.style.width = `${profileImg.current.offsetWidth}px`;
           intro.current.style.bottom = `-${intro.current.offsetHeight}px`;
           setHelloImgStyleTag('active-two');
           setProfileImgStyleTag(undefined);
           setIntroStyleTag(undefined);
-        } else if (window.scrollY >= helloHeight * 0.4 && window.scrollY < helloHeight) {
+        } else if (window.scrollY >= helloHeight * 0.5 && window.scrollY < helloHeight) {
           helloImg.current.style.top = `${(window.innerHeight - helloImg.current.offsetHeight) / 2}px`;
           intro.current.style.width = `${profileImg.current.offsetWidth}px`;
           intro.current.style.bottom = `${profileImg.current.offsetHeight * 0.6}px`;
@@ -67,6 +67,28 @@ function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNav
           </div>
           <img className={hs('home__profile--img', profileImgStyleTag)} ref={profileImg} src='/img/profile.png' alt='profile-of-me' />
         </div>
+        <article>
+          <div>
+            <div>이름</div>
+            <div>홍찬기</div>
+          </div>
+          <div>
+            <div>생년월일</div>
+            <div>96.04.26</div>
+          </div>
+          <div>
+            <div>카카오톡</div>
+            <div>오픈챗팅링크</div>
+          </div>
+          <div>
+            <div>메일</div>
+            <div>bom8018@naver.com</div>
+          </div>
+          <div>
+            <div>학력</div>
+            <div>강원대학교</div>
+          </div>
+        </article>
       </div>
     </>
   );

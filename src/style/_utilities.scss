@@ -7,25 +7,24 @@ $로고글씨채우기: #7deddd;
 $로고글씨채우기2: #57afdf;
 $로고글씨윤곽선: #31334b;
 
-// 반응형 분기점
-$mobile: 832px;
-$desktop: 833px;
-
+// 헤더 분기점
+$header-mobile: 832px;
+$header-desktop: 833px;
 // 832px 이하일 때,
-@mixin mobile {
-  @media (max-width: $mobile) {
+@mixin header-mobile {
+  @media (max-width: $header-mobile) {
     @content;
   }
 }
 // 모바일에서 숨기기 속성
-.hidden-on-mobile {
-  @media (max-width: $mobile) {
+.hidden-on-header-mobile {
+  @media (max-width: $header-mobile) {
     visibility: hidden;
   }
 }
 // 데스크탑에서 숨기기 속성
-.hidden-on-desktop {
-  @media (min-width: $desktop) {
+.hidden-on-header-desktop {
+  @media (min-width: $header-desktop) {
     visibility: hidden;
   }
 }

@@ -66,14 +66,14 @@ function Header({
             <Link to='/'>
               <img className={hs('header__global-navigation--logo')} src='/logo192.png' alt='logo' />
             </Link>
-            <div className={hs('header__global-navigation--contents-wrapper', 'hidden-on-mobile')}>
+            <div className={hs('header__global-navigation--contents-wrapper', 'hidden-on-header-mobile')}>
               <a href='https://velog.io/@coldair426'>벨로그</a>
               <a href='https://github.com/coldair426'>깃허브</a>
               <a href='https://open.kakao.com/o/s7ZC0Rnf'>카카오톡</a>
               <a href='mailto:coldair426@gmail.com'>메일</a>
             </div>
             <button
-              className={hs('header__global-navigation--menu-button', 'hidden-on-desktop')}
+              className={hs('header__global-navigation--menu-button', 'hidden-on-header-desktop')}
               onClick={() => {
                 setMenuBoxVisible(true);
               }}>
@@ -95,13 +95,13 @@ function Header({
               <div>개요</div>
             </button>
             <button>
-              <div>스택</div>
+              <div>프로젝트</div>
             </button>
             <button>
               <div>사이트</div>
             </button>
             <button>
-              <div>프로젝트</div>
+              <div>사이트</div>
             </button>
           </div>
         </div>

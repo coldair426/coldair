@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include mobile {
+    @include header-mobile {
       height: 48px;
       padding: 0 16px;
     }
@@ -27,7 +27,7 @@
       height: 14px;
       opacity: 0.8;
       margin: 10px 20px 10px 0;
-      @include mobile {
+      @include header-mobile {
         width: 17px;
         height: 17px;
       }
@@ -39,7 +39,7 @@
       display: flex;
       a + a {
         margin-left: 90px;
-        @include mobile {
+        @include header-mobile {
           margin-left: 0px;
         }
       }
@@ -49,7 +49,7 @@
         text-align: center;
         font-size: 12px;
         width: 70px;
-        @include mobile {
+        @include header-mobile {
           width: 1px;
         }
         &:hover {
@@ -60,7 +60,7 @@
     .header__global-navigation--menu-button {
       width: 14px;
       padding: 10px 0px 10px 20px;
-      @include mobile {
+      @include header-mobile {
         width: 20px;
       }
       &:hover {
@@ -96,7 +96,7 @@
     align-items: flex-end;
     justify-content: space-between;
     box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.24);
-    @include mobile {
+    @include header-mobile {
       height: 60px;
       margin: 0 0px;
       padding: 0 16px;
@@ -111,7 +111,7 @@
         opacity: 0.61;
         margin-bottom: 6px;
         letter-spacing: 0.7px;
-        @include mobile {
+        @include header-mobile {
           letter-spacing: -0.2px;
           font-size: 11px;
           margin-bottom: 5px;
@@ -122,7 +122,7 @@
         font-weight: 900;
         letter-spacing: 15px;
         margin-bottom: 12px;
-        @include mobile {
+        @include header-mobile {
           letter-spacing: 9px;
           font-size: 19px;
         }
