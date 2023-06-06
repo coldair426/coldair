@@ -1,71 +1,69 @@
 import React, { useEffect, useRef } from 'react';
 import styles from '../style/Home.module.scss';
 import classNames from 'classnames/bind';
+import { useState } from 'react';
 
 const hs = classNames.bind(styles);
 
 function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNavHeight: number; headerLocalNavHeight: number }) {
+  const hello = useRef<HTMLImageElement>(null); // "헬로컴포넌트"
   const helloImg = useRef<HTMLImageElement>(null); // "안녕하세요"
+  const [helloImgStyleTag, setHelloImgStyleTag] = useState<undefined | string>(undefined); // "안녕하세요" 스타일 태그
   const intro = useRef<HTMLImageElement>(null); // "프론트엔드+홍찬기"
+  const [introStyleTag, setIntroStyleTag] = useState<undefined | string>(undefined); // 인트로 스타일 태그
   const profileImg = useRef<HTMLImageElement>(null); // "프로필사진"
-  const helloPlaceHolder = useRef<HTMLDivElement>(null); // hello place holder
+  const [profileImgStyleTag, setProfileImgStyleTag] = useState<undefined | string>(undefined); // 프로필사진 스타일 태그
 
-  // 플래이스홀더 크기 조정
   useEffect(() => {
-    if (helloPlaceHolder.current) {
-      helloPlaceHolder.current.style.height = `${window.innerHeight - headerGlobalNavHeight - headerLocalNavHeight + headerGlobalNavHeight * 30}px`;
-    }
-  }, [headerGlobalNavHeight, headerLocalNavHeight]);
-  useEffect(() => {
-    const helloImgMovingEffect = () => {
-      if (helloImg.current && profileImg.current && intro.current) {
-        if (window.scrollY < 44) {
-          helloImg.current.style.opacity = '1';
-          helloImg.current.style.top = `${
-            (window.innerHeight - (headerGlobalNavHeight + headerLocalNavHeight) - helloImg.current.offsetHeight) / 2 + (headerGlobalNavHeight + headerLocalNavHeight)
-          }px`;
-          helloImg.current.style.width = '400px';
-          profileImg.current.style.opacity = '0';
-        } else if (window.scrollY >= headerGlobalNavHeight * 1 && window.scrollY < headerGlobalNavHeight * 10) {
-          helloImg.current.style.opacity = '1';
-          helloImg.current.style.width = '1300px';
-          helloImg.current.style.top = `${(window.innerHeight - headerGlobalNavHeight - helloImg.current.offsetHeight) / 2 + headerGlobalNavHeight}px`;
-          profileImg.current.style.opacity = '0';
-          intro.current.style.opacity = '0';
+    const helloMovingEffect = () => {
+      if (hello.current && helloImg.current && profileImg.current && intro.current) {
+        const helloHeight = headerGlobalNavHeight + headerLocalNavHeight + hello.current.offsetHeight - window.innerHeight; // hello컴포넌트가 끝나는 지점까지의 스크롤롤 높이
+        if (window.scrollY < helloHeight * 0.1) {
+          helloImg.current.style.top = `${(window.innerHeight - helloImg.current.offsetHeight) / 2}px`;
           intro.current.style.bottom = `-${intro.current.offsetHeight}px`;
-        } else if (window.scrollY >= headerGlobalNavHeight * 10 && window.scrollY < headerGlobalNavHeight * 30) {
-          helloImg.current.style.opacity = '0';
-          profileImg.current.style.opacity = '1';
-          intro.current.style.opacity = '1';
+          setHelloImgStyleTag('active-one');
+          setProfileImgStyleTag(undefined);
+          setIntroStyleTag(undefined);
+        } else if (window.scrollY >= helloHeight * 0.1 && window.scrollY < helloHeight * 0.4) {
+          helloImg.current.style.top = `${(window.innerHeight - helloImg.current.offsetHeight) / 2}px`;
+          intro.current.style.bottom = `-${intro.current.offsetHeight}px`;
+          setHelloImgStyleTag('active-two');
+          setProfileImgStyleTag(undefined);
+          setIntroStyleTag(undefined);
+        } else if (window.scrollY >= helloHeight * 0.4 && window.scrollY < helloHeight) {
+          helloImg.current.style.top = `${(window.innerHeight - helloImg.current.offsetHeight) / 2}px`;
           intro.current.style.bottom = `${profileImg.current.offsetHeight * 0.6}px`;
-        } else if (window.scrollY >= headerGlobalNavHeight * 30 && window.scrollY < headerGlobalNavHeight * 40) {
-          profileImg.current.style.opacity = '0';
-          intro.current.style.opacity = '0';
+          setHelloImgStyleTag(undefined);
+          setProfileImgStyleTag('active');
+          setIntroStyleTag('active');
+        } else if (window.scrollY >= helloHeight) {
+          helloImg.current.style.top = `${(window.innerHeight - helloImg.current.offsetHeight) / 2}px`;
           intro.current.style.bottom = `-${intro.current.offsetHeight}px`;
+          setHelloImgStyleTag(undefined);
+          setProfileImgStyleTag(undefined);
+          setIntroStyleTag(undefined);
         }
       }
     };
-    helloImgMovingEffect(); // 초기1회실행
-    window.addEventListener('scroll', helloImgMovingEffect);
+    helloMovingEffect(); // 초기1회실행
+    window.addEventListener('scroll', helloMovingEffect);
     return () => {
-      window.removeEventListener('scroll', helloImgMovingEffect);
+      window.removeEventListener('scroll', helloMovingEffect);
     };
   }, [headerGlobalNavHeight, headerLocalNavHeight]);
 
   return (
     <>
       <div className={hs('home')}>
-        <div className={hs('home__hello')}>
-          <img className={hs('home__hello--img')} ref={helloImg} src='/img/Home__hello.png' alt='say-hello' />
-          <div className={hs('home__hello--intro')} ref={intro}>
+        <div className={hs('home__hello')} ref={hello}>
+          <img className={hs('home__hello--img', helloImgStyleTag)} ref={helloImg} src='/img/Home__hello.png' alt='say-hello' />
+          <div className={hs('home__hello--intro', introStyleTag)} ref={intro}>
             <img className={hs('home__hello--intro-frontend')} src='/img/frontend.png' alt='front-end-dev' />
             <img className={hs('home__hello--intro-name')} src='/img/name.png' alt='my-name-chanki' />
           </div>
-          <img className={hs('home__profile--img')} ref={profileImg} src='/img/Home__profile.png' alt='profile-of-me' />
+          <img className={hs('home__profile--img', profileImgStyleTag)} ref={profileImg} src='/img/Home__profile.png' alt='profile-of-me' />
         </div>
-        <div className={hs('home__hello-place-holder')} ref={helloPlaceHolder}></div>
       </div>
-      <div>플레이스홀더 이후</div>
     </>
   );
 }
