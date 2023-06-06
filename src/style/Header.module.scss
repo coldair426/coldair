@@ -1,6 +1,8 @@
 @import '_utilities.scss';
 
 .header {
+  position: relative;
+  z-index: 80;
   -webkit-backdrop-filter: saturate(180%) blur(20px); // 사파리 호환
   backdrop-filter: saturate(180%) blur(20px); // 배경흐리기 속성
   transition: background-color 1s ease;
@@ -80,6 +82,7 @@
   display: flex;
   justify-content: center;
   position: sticky;
+  z-index: 80;
   top: 0px;
   -webkit-backdrop-filter: saturate(180%) blur(20px); // 사파리 호환
   backdrop-filter: saturate(180%) blur(20px); // 배경흐리기 속성
