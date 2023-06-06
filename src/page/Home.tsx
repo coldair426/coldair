@@ -10,27 +10,6 @@ function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNav
   const profileImg = useRef<HTMLImageElement>(null); // "프로필사진"
   const helloPlaceHolder = useRef<HTMLDivElement>(null); // hello place holder
 
-  // useEffect(() => {
-  // const headerStyleChange = () => {
-  //   if (header.current && headerLocalNavigation.current && headerLocalNavigationContents.current) {
-  //     if (window.scrollY >= header.current.offsetHeight) {
-  //       headerLocalNavigationContents.current.style.boxShadow = 'none';
-  //       headerLocalNavigation.current.style.boxShadow = '0px 1px 0px 0px rgba(255, 255, 255, 0.24)';
-  //       header.current.style.backgroundColor = 'rgba(29, 29, 31, 0.9)';
-  //       headerLocalNavigation.current.style.backgroundColor = 'rgba(29, 29, 31, 0.9)';
-  //     } else {
-  //       headerLocalNavigationContents.current.style.boxShadow = '0px 1px 0px 0px rgba(255, 255, 255, 0.24)';
-  //       headerLocalNavigation.current.style.boxShadow = 'none';
-  //       header.current.style.backgroundColor = 'transparent';
-  //       headerLocalNavigation.current.style.backgroundColor = 'transparent';
-  //     }
-  //   }
-  // };
-  // window.addEventListener('scroll', headerStyleChange);
-  // return () => {
-  //   window.removeEventListener('scroll', headerStyleChange);
-  // };
-  // }, []);
   // 플래이스홀더 크기 조정
   useEffect(() => {
     if (helloPlaceHolder.current) {
@@ -40,7 +19,7 @@ function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNav
   useEffect(() => {
     const helloImgMovingEffect = () => {
       if (helloImg.current && profileImg.current && intro.current) {
-        if (window.scrollY < headerGlobalNavHeight * 1) {
+        if (window.scrollY < 44) {
           helloImg.current.style.opacity = '1';
           helloImg.current.style.top = `${
             (window.innerHeight - (headerGlobalNavHeight + headerLocalNavHeight) - helloImg.current.offsetHeight) / 2 + (headerGlobalNavHeight + headerLocalNavHeight)
