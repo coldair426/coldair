@@ -1,55 +1,90 @@
 @import '_utilities.scss';
 
-.home__hello {
+.outline__profile {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 360vh;
+  height: 200vh;
   overflow: hidden;
-  .home__hello--img {
-    position: fixed;
-    opacity: 0;
-    width: 21vw;
-    transition: width 0.5s, opacity 0.5s;
-    transition-timing-function: ease;
-  }
-  .home__hello--img.active-one {
-    opacity: 1;
-    width: 21vw;
-  }
-  .home__hello--img.active-two {
-    opacity: 1;
-    width: 68vw;
-  }
-  .home__hello--intro {
+  .outline__profile--name {
     position: fixed;
     opacity: 0;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     transition: bottom 0.5s, opacity 0.5s;
     transition-timing-function: ease;
-    .home__hello--intro-frontend {
-      height: 26vh;
+    &.active-one {
+      opacity: 1;
     }
-    .home__hello--intro-name {
+    &.active-two {
+      position: absolute;
+      opacity: 1;
+    }
+    & > img {
       height: 26vh;
     }
   }
-  .home__hello--intro.active {
-    opacity: 1;
-  }
-  .home__profile--img {
+  .outline__profile--img {
     position: fixed;
     bottom: 0;
-    height: 90vh;
+    height: 80vh;
+    max-width: 980px;
     opacity: 0;
     transition: opacity 0.7s;
     transition-timing-function: ease;
+    &.active-one {
+      opacity: 1;
+    }
+    &.active-two {
+      position: absolute;
+      opacity: 1;
+    }
+    &.active-three {
+      position: absolute;
+      opacity: 0;
+    }
   }
-  .home__profile--img.active {
-    opacity: 1;
+}
+.outline__mantra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .outline__mantra--title {
+    opacity: 0;
+    width: 100%;
+    max-width: 980px;
+    text-align: center;
+    font-size: 85px;
+    font-weight: 900;
+    margin-top: 100px;
+    transition: opacity 0.7s;
+    transition-timing-function: ease;
+    div + div {
+      margin-top: 20px;
+    }
+    &.active {
+      opacity: 1;
+    }
+  }
+  .outline__mantra--explanation {
+    opacity: 0;
+    color: $본문글씨;
+    margin-top: 35px;
+    width: 100%;
+    max-width: 980px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 38px;
+    word-break: keep-all;
+    transition: opacity 0.7s;
+    transition-timing-function: ease;
+    &.active {
+      opacity: 1;
+    }
   }
 }

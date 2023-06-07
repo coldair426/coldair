@@ -87,7 +87,9 @@ function Header({
           <button onClick={scrollToTop}>
             <div>
               <div className={hs('header__local-navigation--sub-title')}>Front-End Dev</div>
-              <div className={hs('header__local-navigation--title')}>홍찬기</div>
+              <div className={hs('header__local-navigation--title')}>
+                홍찬기<span>(Chanki)</span>
+              </div>
             </div>
           </button>
           <div className={hs('header__local-navigation--contents-wrapper')}>
@@ -98,10 +100,7 @@ function Header({
               <div>프로젝트</div>
             </button>
             <button>
-              <div>사이트</div>
-            </button>
-            <button>
-              <div>사이트</div>
+              <div>정보</div>
             </button>
           </div>
         </div>
