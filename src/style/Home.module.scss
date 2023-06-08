@@ -20,17 +20,53 @@
       justify-content: space-between;
       transition: bottom 0.5s, opacity 0.5s;
       transition-timing-function: ease;
+      @include home-desktop {
+        width: 780px;
+      }
+      @include home-tablet {
+        width: 700px;
+      }
+      @include home-mobile {
+        width: 85%;
+      }
       &.active-one {
         opacity: 1;
         bottom: 530px;
+        @include home-desktop {
+          bottom: 400px;
+        }
+        @include home-tablet {
+          bottom: 60vh;
+        }
+        @include home-mobile {
+          bottom: 68vh;
+        }
       }
       &.active-two {
         position: absolute;
         opacity: 1;
         bottom: 530px;
+        @include home-desktop {
+          bottom: 400px;
+        }
+        @include home-tablet {
+          bottom: 60vh;
+        }
+        @include home-mobile {
+          bottom: 68vh;
+        }
       }
       & > img {
         width: 400px;
+        @include home-desktop {
+          width: 300px;
+        }
+        @include home-tablet {
+          width: 260px;
+        }
+        @include home-mobile {
+          width: 30vw;
+        }
       }
     }
     .outline__profile--img {
@@ -44,10 +80,12 @@
         width: 780px;
       }
       @include home-tablet {
-        width: 650px;
+        height: 80vh;
+        width: auto;
       }
       @include home-mobile {
-        width: 550px;
+        height: 82vh;
+        width: auto;
       }
       &.active-one {
         opacity: 1;
