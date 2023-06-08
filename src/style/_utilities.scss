@@ -9,7 +9,6 @@ $로고글씨윤곽선: #31334b;
 
 // 헤더 분기점
 $header-mobile: 832px;
-$header-desktop: 833px;
 // 832px 이하일 때,
 @mixin header-mobile {
   @media (max-width: $header-mobile) {
@@ -24,7 +23,30 @@ $header-desktop: 833px;
 }
 // 데스크탑에서 숨기기 속성
 .hidden-on-header-desktop {
-  @media (min-width: $header-desktop) {
+  @media (min-width: 833px) {
     visibility: hidden;
+  }
+}
+
+// 홈 분기점
+$home-desktop: 1500px;
+$home-tablet: 991px;
+$home-mobile: 767px;
+// 1500px 이하
+@mixin home-desktop {
+  @media (max-width: $home-desktop) {
+    @content;
+  }
+}
+// 991px 이하
+@mixin home-tablet {
+  @media (max-width: $home-tablet) {
+    @content;
+  }
+}
+// 767px 이하
+@mixin home-mobile {
+  @media (max-width: $home-mobile) {
+    @content;
   }
 }

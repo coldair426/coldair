@@ -26,26 +26,24 @@ function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNav
         const outlineProfileTopHeight = headerGlobalNavHeight + headerLocalNavHeight + outlineProfile.offsetHeight - window.innerHeight; // outline__profile 하단이 window 하단에 걸리는 시점
         const outlineProfileHeight = headerGlobalNavHeight + headerLocalNavHeight + outlineProfile.offsetHeight; // outline__profile 실제 높이, window상단(끝) 위치하는 시점
         if (userScrollY < outlineProfileTopHeight * 0.1) {
-          outlineProfileName.style.width = `${outlineProfileImg.offsetWidth}px`;
-          outlineProfileName.style.bottom = `-${outlineProfileName.offsetHeight}px`;
           setOutlineProfileImgStyle('active-one');
           setOutlineProfileNameStyle(undefined);
         } else if (userScrollY >= outlineProfileTopHeight * 0.1 && userScrollY < outlineProfileTopHeight) {
-          outlineProfileName.style.width = `${outlineProfileImg.offsetWidth}px`;
-          outlineProfileName.style.bottom = `${outlineProfileImg.offsetHeight * 0.7}px`;
           setOutlineProfileImgStyle('active-one');
           setOutlineProfileNameStyle('active-one');
-        } else if (userScrollY >= outlineProfileTopHeight && userScrollY < outlineProfileTopHeight + headerLocalNavHeight + outlineProfileName.offsetHeight) {
+        } else if (userScrollY >= outlineProfileTopHeight && userScrollY < outlineProfileTopHeight + outlineProfileImg.height) {
           setOutlineProfileImgStyle('active-two');
           setOutlineProfileNameStyle('active-two');
           setOutlineMantraTitleStyle(undefined);
           setOutlineMantraExplanationStyle(undefined);
-        } else if (userScrollY >= outlineProfileTopHeight + headerLocalNavHeight + outlineProfileName.offsetHeight && userScrollY < outlineProfileHeight) {
+        } else if (userScrollY >= outlineProfileTopHeight + outlineProfileImg.height && userScrollY < outlineProfileHeight * 0.75) {
           setOutlineProfileImgStyle('active-three');
           setOutlineMantraTitleStyle('active');
           setOutlineMantraExplanationStyle('active');
-        } else if (userScrollY >= outlineProfileHeight) {
-          setOutlineProfileImgStyle('active-three');
+        } else if (userScrollY >= outlineProfileHeight * 0.75 && userScrollY < outlineProfileHeight + outlineMantra.height) {
+          setOutlineMantraTitleStyle(undefined);
+          setOutlineMantraExplanationStyle(undefined);
+        } else if (userScrollY >= outlineProfileHeight + outlineMantra.height) {
           setOutlineMantraTitleStyle(undefined);
           setOutlineMantraExplanationStyle(undefined);
         }
@@ -64,10 +62,10 @@ function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNav
         <article className={hs('home__outline')}>
           <div className={hs('outline__profile')} ref={outlineProfileRef}>
             <div className={hs('outline__profile--name', outlineProfileNameStyle)} ref={outlineProfileNameRef}>
-              <img src='/img/frontend.png' alt='front-end-dev' />
-              <img src='/img/name.png' alt='my-name-chanki' />
+              <img src='/img/frontend.webp' alt='front-end-dev' />
+              <img src='/img/name.webp' alt='my-name-chanki' />
             </div>
-            <img className={hs('outline__profile--img', outlineProfileImgStyle)} ref={outlineProfileImgRef} src='/img/profile.png' alt='profile-of-me' />
+            <img className={hs('outline__profile--img', outlineProfileImgStyle)} ref={outlineProfileImgRef} src='/img/profile.webp' alt='profile-of-me' />
           </div>
           <div className={hs('outline__mantra')} ref={outlineMantraRef}>
             <div className={hs('outline__mantra--title', outlineMantraTitleStyle)}>
@@ -81,11 +79,14 @@ function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNav
           </div>
         </article>
         <article className={hs('home__projects')}>
-          <article>포트폴리오페이지(개인)</article>
-          <article>빵돌이(팀)</article>
-          <article>식선비(개인)</article>
-          <article>호사로운(팀)</article>
-          <article>VanilaJs호사로운(팀)</article>
+          <article className={hs('projects__portfolio')}>
+            <div className={hs('projects__portfolio--title')}>포트폴리오(개인프로젝트)</div>
+            <div>플레이스홀더</div>
+          </article>
+          <article className={hs('projects__breadkun')}>빵돌이(팀)</article>
+          <article className={hs('projects__siksunbi')}>식선비(개인)</article>
+          <article className={hs('projects__hosaroun-react')}>호사로운(팀)</article>
+          <article className={hs('projects__hosaroun-vanilla-js')}>VanilaJs호사로운(팀)</article>
         </article>
         <article className={hs('home__informations')}>
           <div>

@@ -70,7 +70,7 @@ function Header({
         <nav className={hs('header__global-navigation')}>
           <div className={hs('header__global-navigation--contents')}>
             <Link to='/'>
-              <img className={hs('header__global-navigation--logo')} src='/logo192.png' alt='logo' />
+              <img className={hs('header__global-navigation--logo')} src='/icon/logo192.webp' alt='logo' />
             </Link>
             <div className={hs('header__global-navigation--contents-wrapper', 'hidden-on-header-mobile')}>
               <a href='https://velog.io/@coldair426'>벨로그</a>
@@ -83,7 +83,7 @@ function Header({
               onClick={() => {
                 setMenuBoxVisible(true);
               }}>
-              <img src='/icon/header-menu-button.png' alt='menu-open-button' />
+              <img src='/icon/header-menu-button.webp' alt='menu-open-button' />
             </button>
           </div>
         </nav>
