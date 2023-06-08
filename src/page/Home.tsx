@@ -1,52 +1,37 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styles from '../style/Home.module.scss';
 import classNames from 'classnames/bind';
 import { useState } from 'react';
 
 const hs = classNames.bind(styles);
 
-function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNavHeight: number; headerLocalNavHeight: number }) {
-  const outlineProfileRef = useRef<HTMLImageElement>(null); // 프로필랩
-  const outlineProfileNameRef = useRef<HTMLImageElement>(null); // 프로필이름
+function Home() {
   const [outlineProfileNameStyle, setOutlineProfileNameStyle] = useState<undefined | string>(undefined); // 프로필이름 스타일
-  const outlineProfileImgRef = useRef<HTMLImageElement>(null); // 프로필사진
   const [outlineProfileImgStyle, setOutlineProfileImgStyle] = useState<undefined | string>(undefined); // 프로필사진 스타일
   const [outlineMantraTitleStyle, setOutlineMantraTitleStyle] = useState<undefined | string>(undefined); // 만트라 타이틀 스타일
   const [outlineMantraExplanationStyle, setOutlineMantraExplanationStyle] = useState<undefined | string>(undefined); // 만트라 설명 스타일
-  const outlineMantraRef = useRef<HTMLImageElement>(null); // 만트라
 
   useEffect(() => {
     const desktopScrollHandler = () => {
       const userScrollY = window.scrollY; // 유저의 스크롤 높이
-      const outlineProfile = outlineProfileRef.current;
-      const outlineProfileName = outlineProfileNameRef.current;
-      const outlineProfileImg = outlineProfileImgRef.current;
-      const outlineMantra = outlineMantraRef.current;
-      if (outlineProfile && outlineProfileName && outlineProfileImg && outlineMantra) {
-        const outlineProfileTopHeight = headerGlobalNavHeight + headerLocalNavHeight + outlineProfile.offsetHeight - window.innerHeight; // outline__profile 하단이 window 하단에 걸리는 시점
-        const outlineProfileHeight = headerGlobalNavHeight + headerLocalNavHeight + outlineProfile.offsetHeight; // outline__profile 실제 높이, window상단(끝) 위치하는 시점
-        if (userScrollY < outlineProfileTopHeight * 0.1) {
-          setOutlineProfileImgStyle('active-one');
-          setOutlineProfileNameStyle(undefined);
-        } else if (userScrollY >= outlineProfileTopHeight * 0.1 && userScrollY < outlineProfileTopHeight) {
-          setOutlineProfileImgStyle('active-one');
-          setOutlineProfileNameStyle('active-one');
-        } else if (userScrollY >= outlineProfileTopHeight && userScrollY < outlineProfileTopHeight + outlineProfileImg.height) {
-          setOutlineProfileImgStyle('active-two');
-          setOutlineProfileNameStyle('active-two');
-          setOutlineMantraTitleStyle(undefined);
-          setOutlineMantraExplanationStyle(undefined);
-        } else if (userScrollY >= outlineProfileTopHeight + outlineProfileImg.height && userScrollY < outlineProfileHeight * 0.75) {
-          setOutlineProfileImgStyle('active-three');
-          setOutlineMantraTitleStyle('active');
-          setOutlineMantraExplanationStyle('active');
-        } else if (userScrollY >= outlineProfileHeight * 0.75 && userScrollY < outlineProfileHeight + outlineMantra.height) {
-          setOutlineMantraTitleStyle(undefined);
-          setOutlineMantraExplanationStyle(undefined);
-        } else if (userScrollY >= outlineProfileHeight + outlineMantra.height) {
-          setOutlineMantraTitleStyle(undefined);
-          setOutlineMantraExplanationStyle(undefined);
-        }
+      if (userScrollY < 400) {
+        setOutlineProfileImgStyle('active-one');
+        setOutlineProfileNameStyle(undefined);
+      } else if (userScrollY >= 400 && userScrollY < 800) {
+        setOutlineProfileImgStyle('active-one');
+        setOutlineProfileNameStyle('active-one');
+      } else if (userScrollY >= 800 && userScrollY < 1200) {
+        setOutlineProfileImgStyle('active-two');
+        setOutlineProfileNameStyle('active-two');
+        setOutlineMantraTitleStyle(undefined);
+        setOutlineMantraExplanationStyle(undefined);
+      } else if (userScrollY >= 1200 && userScrollY < 2070) {
+        setOutlineProfileImgStyle('active-three');
+        setOutlineMantraTitleStyle('active');
+        setOutlineMantraExplanationStyle('active');
+      } else if (userScrollY >= 2070 && userScrollY < 4000) {
+        setOutlineMantraTitleStyle(undefined);
+        setOutlineMantraExplanationStyle(undefined);
       }
     };
     desktopScrollHandler(); // 초기1회실행
@@ -54,20 +39,20 @@ function Home({ headerGlobalNavHeight, headerLocalNavHeight }: { headerGlobalNav
     return () => {
       window.removeEventListener('scroll', desktopScrollHandler);
     };
-  }, [headerGlobalNavHeight, headerLocalNavHeight]);
+  }, []);
 
   return (
     <>
       <div className={hs('home')}>
         <article className={hs('home__outline')}>
-          <div className={hs('outline__profile')} ref={outlineProfileRef}>
-            <div className={hs('outline__profile--name', outlineProfileNameStyle)} ref={outlineProfileNameRef}>
+          <div className={hs('outline__profile')}>
+            <div className={hs('outline__profile--name', outlineProfileNameStyle)}>
               <img src='/img/frontend.webp' alt='front-end-dev' />
               <img src='/img/name.webp' alt='my-name-chanki' />
             </div>
-            <img className={hs('outline__profile--img', outlineProfileImgStyle)} ref={outlineProfileImgRef} src='/img/profile.webp' alt='profile-of-me' />
+            <img className={hs('outline__profile--img', outlineProfileImgStyle)} src='/img/profile.webp' alt='profile-of-me' />
           </div>
-          <div className={hs('outline__mantra')} ref={outlineMantraRef}>
+          <div className={hs('outline__mantra')}>
             <div className={hs('outline__mantra--title', outlineMantraTitleStyle)}>
               <div>섬세함. 빠른 습득력.</div>
               <div>몰두하는 것을 즐깁니다.</div>

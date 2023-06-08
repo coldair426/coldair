@@ -29,16 +29,16 @@ $header-mobile: 832px;
 }
 
 // 홈 분기점
-$home-desktop: 1500px;
-$home-tablet: 991px;
+$home-desktop: 1600px;
+$home-tablet: 1200px;
 $home-mobile: 767px;
-// 1500px 이하
+// 1600px 이하
 @mixin home-desktop {
   @media (max-width: $home-desktop) {
     @content;
   }
 }
-// 991px 이하
+// 1200px 이하
 @mixin home-tablet {
   @media (max-width: $home-tablet) {
     @content;
