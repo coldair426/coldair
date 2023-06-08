@@ -14,29 +14,47 @@ function Header({
   setHeaderGlobalNavHeight: React.Dispatch<React.SetStateAction<number>>;
   setHeaderLocalNavHeight: React.Dispatch<React.SetStateAction<number>>;
 }) {
-  const header = useRef<HTMLElement | null>(null);
-  const headerLocalNavigation = useRef<HTMLElement | null>(null);
-  const headerLocalNavigationContents = useRef<HTMLDivElement | null>(null);
+  const headerRef = useRef<HTMLElement | null>(null);
+  const headerLocalNavigationRef = useRef<HTMLElement | null>(null);
+  const headerLocalNavigationContentsRef = useRef<HTMLDivElement | null>(null);
 
   // 맨위로 스크롤 하는 함수
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
 
+  // 리사이즈시 요소 높이 업데이트
+  useEffect(() => {
+    const heightUpdate = () => {
+      const header = headerRef.current;
+      const headerLocalNavigation = headerLocalNavigationRef.current;
+      if (header && headerLocalNavigation) {
+        setHeaderGlobalNavHeight(header.offsetHeight);
+        setHeaderLocalNavHeight(headerLocalNavigation.offsetHeight);
+      }
+    };
+    heightUpdate(); // 최초 1회 실행
+    window.addEventListener('resize', heightUpdate);
+    return () => window.removeEventListener('resize', heightUpdate);
+  }, [setHeaderGlobalNavHeight, setHeaderLocalNavHeight]);
   // 스크롤에 따라 효과
   useEffect(() => {
     const headerStyleChange = () => {
-      if (header.current && headerLocalNavigation.current && headerLocalNavigationContents.current) {
-        if (window.scrollY >= header.current.offsetHeight) {
-          headerLocalNavigationContents.current.style.boxShadow = 'none';
-          headerLocalNavigation.current.style.boxShadow = '0px 1px 0px 0px rgba(255, 255, 255, 0.24)';
-          header.current.style.backgroundColor = 'rgba(29, 29, 31, 0.9)';
-          headerLocalNavigation.current.style.backgroundColor = 'rgba(29, 29, 31, 0.9)';
+      const userScrollY = window.scrollY; // 유저의 스크롤 높이
+      const header = headerRef.current;
+      const headerLocalNavigation = headerLocalNavigationRef.current;
+      const headerLocalNavigationContents = headerLocalNavigationContentsRef.current;
+      if (header && headerLocalNavigation && headerLocalNavigationContents) {
+        if (userScrollY >= header.offsetHeight) {
+          headerLocalNavigationContents.style.boxShadow = 'none';
+          headerLocalNavigation.style.boxShadow = '0px 1px 0px 0px rgba(255, 255, 255, 0.24)';
+          header.style.backgroundColor = 'rgba(29, 29, 31, 0.9)';
+          headerLocalNavigation.style.backgroundColor = 'rgba(29, 29, 31, 0.9)';
         } else {
-          headerLocalNavigationContents.current.style.boxShadow = '0px 1px 0px 0px rgba(255, 255, 255, 0.24)';
-          headerLocalNavigation.current.style.boxShadow = 'none';
-          header.current.style.backgroundColor = 'transparent';
-          headerLocalNavigation.current.style.backgroundColor = 'transparent';
+          headerLocalNavigationContents.style.boxShadow = '0px 1px 0px 0px rgba(255, 255, 255, 0.24)';
+          headerLocalNavigation.style.boxShadow = 'none';
+          header.style.backgroundColor = 'transparent';
+          headerLocalNavigation.style.backgroundColor = 'transparent';
         }
       }
     };
@@ -45,22 +63,10 @@ function Header({
       window.removeEventListener('scroll', headerStyleChange);
     };
   }, []);
-  // 리사이즈시 요소 높이 업데이트
-  useEffect(() => {
-    const heightUpdate = () => {
-      if (header.current && headerLocalNavigation.current) {
-        setHeaderGlobalNavHeight(header.current.offsetHeight);
-        setHeaderLocalNavHeight(headerLocalNavigation.current.offsetHeight);
-      }
-    };
-    heightUpdate(); // 최초 1회 실행
-    window.addEventListener('resize', heightUpdate);
-    return () => window.removeEventListener('resize', heightUpdate);
-  }, [setHeaderGlobalNavHeight, setHeaderLocalNavHeight]);
 
   return (
     <>
-      <header className={hs('header')} ref={header}>
+      <header className={hs('header')} ref={headerRef}>
         <nav className={hs('header__global-navigation')}>
           <div className={hs('header__global-navigation--contents')}>
             <Link to='/'>
@@ -82,8 +88,8 @@ function Header({
           </div>
         </nav>
       </header>
-      <nav className={hs('header__local-navigation')} ref={headerLocalNavigation}>
-        <div className={hs('header__local-navigation--contents')} ref={headerLocalNavigationContents}>
+      <nav className={hs('header__local-navigation')} ref={headerLocalNavigationRef}>
+        <div className={hs('header__local-navigation--contents')} ref={headerLocalNavigationContentsRef}>
           <button onClick={scrollToTop}>
             <div>
               <div className={hs('header__local-navigation--sub-title')}>Front-End Dev</div>
