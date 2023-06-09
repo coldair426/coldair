@@ -24,37 +24,28 @@
         width: 780px;
       }
       @include home-tablet {
-        width: 700px;
+        width: 720px;
+        max-width: 100%;
       }
       @include home-mobile {
-        width: 85%;
+        width: 90%;
       }
-      &.active-one {
+      &.active-one,
+      &.active-two {
         opacity: 1;
         bottom: 530px;
         @include home-desktop {
           bottom: 400px;
         }
         @include home-tablet {
-          bottom: 60vh;
+          bottom: 64vh;
         }
         @include home-mobile {
-          bottom: 68vh;
+          bottom: 69vh;
         }
       }
       &.active-two {
         position: absolute;
-        opacity: 1;
-        bottom: 530px;
-        @include home-desktop {
-          bottom: 400px;
-        }
-        @include home-tablet {
-          bottom: 60vh;
-        }
-        @include home-mobile {
-          bottom: 68vh;
-        }
       }
       & > img {
         width: 400px;
@@ -62,10 +53,10 @@
           width: 300px;
         }
         @include home-tablet {
-          width: 260px;
+          width: 280px;
         }
         @include home-mobile {
-          width: 30vw;
+          width: 43vw;
         }
       }
     }
@@ -77,14 +68,14 @@
       transition: opacity 0.7s;
       transition-timing-function: ease;
       @include home-desktop {
-        width: 780px;
+        width: 52vw;
       }
       @include home-tablet {
         height: 80vh;
         width: auto;
       }
       @include home-mobile {
-        height: 82vh;
+        height: 65vh;
         width: auto;
       }
       &.active-one {
@@ -109,15 +100,30 @@
     align-items: center;
     justify-content: center;
     .outline__mantra--title {
-      width: 980px;
+      max-width: 980px;
       opacity: 0;
       text-align: center;
       font-size: 85px;
       font-weight: 900;
       transition: opacity 0.7s;
       transition-timing-function: ease;
+      @include home-desktop {
+        font-size: 75px;
+      }
+      @include home-tablet {
+        font-size: 65px;
+      }
+      @include home-mobile {
+        max-width: none;
+        width: 85%;
+        text-align: right;
+        font-size: 40px;
+      }
       div + div {
         margin-top: 20px;
+        @include home-mobile {
+          margin-top: 10px;
+        }
       }
       &.active {
         opacity: 1;
@@ -127,7 +133,7 @@
       opacity: 0;
       color: $본문글씨;
       margin-top: 35px;
-      width: 980px;
+      max-width: 980px;
       text-align: center;
       font-size: 30px;
       font-weight: 900;
@@ -135,6 +141,20 @@
       word-break: keep-all;
       transition: opacity 0.7s;
       transition-timing-function: ease;
+      @include home-desktop {
+        font-size: 30px;
+      }
+      @include home-tablet {
+        max-width: 90%;
+        font-size: 28px;
+      }
+      @include home-mobile {
+        text-align: justify;
+        word-break: normal;
+        max-width: 85%;
+        font-size: 28px;
+        margin-top: 23px;
+      }
       &.active {
         opacity: 1;
       }

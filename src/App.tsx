@@ -9,10 +9,12 @@ import MenuBox from './component/MenuBox';
 
 function App() {
   const [menuBoxVisible, setMenuBoxVisible] = useState(false);
+  const [windowInnerWidth, setWindowInnerWidth] = useState(0);
 
   // 메뉴 창이 켜진 상태에서 너비 늘릴(너비가 832px 초과시) 때 자동꺼짐
   useEffect(() => {
     const handleResize = () => {
+      setWindowInnerWidth(window.innerWidth);
       if (menuBoxVisible === true) {
         window.innerWidth > 832 && setMenuBoxVisible(false);
       }
@@ -28,7 +30,7 @@ function App() {
       <Header setMenuBoxVisible={setMenuBoxVisible} />
       {menuBoxVisible && <MenuBox setMenuBoxVisible={setMenuBoxVisible} />}
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home windowInnerWidth={windowInnerWidth} />} />
       </Routes>
       <Footer />
     </>
