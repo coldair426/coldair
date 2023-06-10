@@ -177,12 +177,28 @@
 }
 
 .home__projects {
-  padding-top: 63px;
-  .projects__portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .project {
+    width: 980px;
     height: 3400px;
+  }
+  .project__title {
+    font-size: 35px;
+    font-weight: 900;
+    & > span {
+      color: $본문글씨;
+      font-size: 25px;
+    }
+  }
+  .projects__portfolio {
+    padding-top: 63px;
   }
 }
 
 .home__informations {
+  width: 980px;
   padding-top: 63px;
 }

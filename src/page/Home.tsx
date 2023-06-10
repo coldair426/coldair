@@ -96,14 +96,26 @@ function Home({
           </div>
         </article>
         <article className={hs('home__projects')} id='projects' ref={homeProjectsRef}>
-          <article className={hs('projects__portfolio')}>
-            <div className={hs('projects__portfolio--title')}>포트폴리오(개인프로젝트)</div>
-            <div>플레이스홀더</div>
+          <article className={hs('projects__portfolio', 'project')}>
+            <div className={hs('projects__portfolio--title', 'project__title')}>
+              포트폴리오<span>(개인프로젝트)</span>
+            </div>
           </article>
-          <article className={hs('projects__breadkun')}>빵돌이(팀)</article>
-          <article className={hs('projects__siksunbi')}>식선비(개인)</article>
-          <article className={hs('projects__hosaroun-react')}>호사로운(팀)</article>
-          <article className={hs('projects__hosaroun-vanilla-js')}>VanilaJs호사로운(팀)</article>
+          <article className={hs('projects__breadkun', 'project')}>
+            <div className={hs('projects__breadkun--title', 'project__title')}>
+              더존 빵돌이<span>(팀프로젝트)</span>
+            </div>
+          </article>
+          <article className={hs('projects__siksunbi', 'project')}>
+            <div className={hs('projects__siksunbi--title', 'project__title')}>
+              식선비<span>(개인프로젝트)</span>
+            </div>
+          </article>
+          <article className={hs('projects__hosaroun-react', 'project')}>
+            <div className={hs('projects__hosaroun-react--title', 'project__title')}>
+              호사로운<span>(팀프로젝트)</span>
+            </div>
+          </article>
         </article>
         <article className={hs('home__informations')} id='informations' ref={homeInformationsRef}>
           <div>
