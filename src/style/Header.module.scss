@@ -159,6 +159,7 @@
         margin-bottom: 12px;
         &.active-content,
         &:hover {
+          font-weight: 900;
           opacity: 1;
           cursor: pointer;
         }
