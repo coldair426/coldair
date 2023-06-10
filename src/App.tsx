@@ -10,6 +10,8 @@ import MenuBox from './component/MenuBox';
 function App() {
   const [menuBoxVisible, setMenuBoxVisible] = useState(false);
   const [windowInnerWidth, setWindowInnerWidth] = useState(0);
+  const [homeOutlineBottom, setHomeOutlineBottom] = useState<undefined | number>(0);
+  const [homeProjectsBottom, setHomeProjectsBottom] = useState<undefined | number>(0);
 
   // 메뉴 창이 켜진 상태에서 너비 늘릴(너비가 832px 초과시) 때 자동꺼짐
   useEffect(() => {
@@ -27,10 +29,10 @@ function App() {
   return (
     <>
       <Reset />
-      <Header setMenuBoxVisible={setMenuBoxVisible} />
+      <Header setMenuBoxVisible={setMenuBoxVisible} homeOutlineBottom={homeOutlineBottom} homeProjectsBottom={homeProjectsBottom} />
       {menuBoxVisible && <MenuBox setMenuBoxVisible={setMenuBoxVisible} />}
       <Routes>
-        <Route path='/' element={<Home windowInnerWidth={windowInnerWidth} />} />
+        <Route path='/' element={<Home windowInnerWidth={windowInnerWidth} setHomeOutlineBottom={setHomeOutlineBottom} setHomeProjectsBottom={setHomeProjectsBottom} />} />
       </Routes>
       <Footer />
     </>

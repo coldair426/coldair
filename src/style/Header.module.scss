@@ -148,15 +148,16 @@
     }
     .header__local-navigation--contents-wrapper {
       display: flex;
-      button + button {
+      a + a {
         margin-left: 20px;
       }
-      & > button > div {
+      & > a > div {
         opacity: 0.61;
         text-align: right;
         font-size: 12px;
         letter-spacing: 1px;
         margin-bottom: 12px;
+        &.active-content,
         &:hover {
           opacity: 1;
           cursor: pointer;

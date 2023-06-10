@@ -5,10 +5,21 @@ import { Link } from 'react-router-dom';
 
 const hs = classNames.bind(styles);
 
-function Header({ setMenuBoxVisible }: { setMenuBoxVisible: React.Dispatch<React.SetStateAction<boolean>> }) {
+function Header({
+  setMenuBoxVisible,
+  homeOutlineBottom,
+  homeProjectsBottom,
+}: {
+  setMenuBoxVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  homeOutlineBottom: undefined | number;
+  homeProjectsBottom: undefined | number;
+}) {
   const [headerStyle, setHeaderStyle] = useState<undefined | string>(undefined); // header 스타일
   const [headerLocalNavigationStyle, setHeaderLocalNavigationStyle] = useState<undefined | string>(undefined); // headerLocalNavigation 스타일
   const [headerLocalNavigationContentsStyle, setHeaderLocalNavigationContentsStyle] = useState<undefined | string>(undefined); // header 스타일
+  const [outlineStyle, setOutlineStyle] = useState<undefined | string>(undefined);
+  const [projects, setProjectsStyle] = useState<undefined | string>(undefined);
+  const [informations, setInformationsStyle] = useState<undefined | string>(undefined);
 
   const headerRef = useRef<HTMLElement | null>(null);
 
@@ -17,6 +28,24 @@ function Header({ setMenuBoxVisible }: { setMenuBoxVisible: React.Dispatch<React
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
 
+  // 활성화된 content 하이라트 적용
+  useEffect(() => {
+    if (homeOutlineBottom && homeProjectsBottom) {
+      if (homeOutlineBottom > 0) {
+        setOutlineStyle('active-content');
+        setProjectsStyle(undefined);
+        setInformationsStyle(undefined);
+      } else if (homeProjectsBottom > 0) {
+        setOutlineStyle(undefined);
+        setProjectsStyle('active-content');
+        setInformationsStyle(undefined);
+      } else {
+        setOutlineStyle(undefined);
+        setProjectsStyle(undefined);
+        setInformationsStyle('active-content');
+      }
+    }
+  }, [homeOutlineBottom, homeProjectsBottom]);
   // 스크롤에 따라 효과
   useEffect(() => {
     const headerStyleChange = () => {
@@ -74,15 +103,33 @@ function Header({ setMenuBoxVisible }: { setMenuBoxVisible: React.Dispatch<React
             </div>
           </button>
           <div className={hs('header__local-navigation--contents-wrapper')}>
-            <button>
-              <div>개요</div>
-            </button>
-            <button>
-              <div>프로젝트</div>
-            </button>
-            <button>
-              <div>정보</div>
-            </button>
+            <a
+              href='#outline'
+              onClick={() => {
+                setOutlineStyle('active-content');
+                setProjectsStyle(undefined);
+                setInformationsStyle(undefined);
+              }}>
+              <div className={hs(outlineStyle)}>개요</div>
+            </a>
+            <a
+              href='#projects'
+              onClick={() => {
+                setOutlineStyle(undefined);
+                setProjectsStyle('active-content');
+                setInformationsStyle(undefined);
+              }}>
+              <div className={hs(projects)}>프로젝트</div>
+            </a>
+            <a
+              href='#informations'
+              onClick={() => {
+                setOutlineStyle(undefined);
+                setProjectsStyle(undefined);
+                setInformationsStyle('active-content');
+              }}>
+              <div className={hs(informations)}>정보</div>
+            </a>
           </div>
         </div>
       </nav>

@@ -47,6 +47,20 @@
       &.active-two {
         position: absolute;
       }
+      &.active-three {
+        position: absolute;
+        opacity: 0;
+        bottom: 530px;
+        @include home-desktop {
+          bottom: 400px;
+        }
+        @include home-tablet {
+          bottom: 64vh;
+        }
+        @include home-mobile {
+          bottom: 69vh;
+        }
+      }
       & > img {
         width: 400px;
         @include home-desktop {
@@ -163,7 +177,12 @@
 }
 
 .home__projects {
+  padding-top: 63px;
   .projects__portfolio {
     height: 3400px;
   }
+}
+
+.home__informations {
+  padding-top: 63px;
 }
