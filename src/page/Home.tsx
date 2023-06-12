@@ -140,6 +140,10 @@ function Home({
             <div>학력</div>
             <div>강원대학교(춘천)</div>
           </div>
+          <div>
+            <div>skills</div>
+            <div>JS React 등</div>
+          </div>
         </article>
       </div>
     </>
