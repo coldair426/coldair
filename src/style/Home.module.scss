@@ -183,33 +183,37 @@
   article {
     width: 100%;
     max-width: 980px;
-    height: 3400px;
     letter-spacing: 4px;
     opacity: 0;
     transition: opacity 0.7s;
     transition-timing-function: ease;
+    padding-bottom: 350px;
     &.active {
       opacity: 1;
     }
     h1 {
+      position: fixed;
+      top: 73px;
       display: flex;
       align-items: center;
-      font-size: 25px;
+      font-size: 20px;
       font-weight: 900;
-      padding: 10px 0;
+      padding: 10px;
+      margin-left: 10px;
+      -webkit-backdrop-filter: saturate(180%) blur(20px); // 사파리 호환
+      backdrop-filter: saturate(180%) blur(20px); // 배경흐리기 속성
+      background-color: rgba(29, 29, 31, 0.8);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      border-radius: 15px;
       img {
         margin-right: 10px;
-        width: 40px;
+        width: 30px;
       }
       span {
         margin-left: 2px;
         letter-spacing: 1px;
         color: $본문글씨;
-        font-size: 20px;
-      }
-      &.active {
-        position: fixed;
-        top: 63px;
+        font-size: 15px;
       }
     }
   }
@@ -221,6 +225,7 @@
 .home__informations {
   display: flex;
   justify-content: center;
+  padding-top: 10px;
   height: 100vh;
   opacity: 0;
   transition: opacity 0.7s;
