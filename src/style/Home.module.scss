@@ -184,13 +184,33 @@
     width: 100%;
     max-width: 980px;
     height: 3400px;
-  }
-  h1 {
-    font-size: 25px;
-    font-weight: 900;
-    span {
-      color: $본문글씨;
-      font-size: 20px;
+    letter-spacing: 4px;
+    opacity: 0;
+    transition: opacity 0.7s;
+    transition-timing-function: ease;
+    &.active {
+      opacity: 1;
+    }
+    h1 {
+      display: flex;
+      align-items: center;
+      font-size: 25px;
+      font-weight: 900;
+      padding: 10px 0;
+      img {
+        margin-right: 10px;
+        width: 40px;
+      }
+      span {
+        margin-left: 2px;
+        letter-spacing: 1px;
+        color: $본문글씨;
+        font-size: 20px;
+      }
+      &.active {
+        position: fixed;
+        top: 63px;
+      }
     }
   }
   .projects__portfolio {
@@ -201,6 +221,13 @@
 .home__informations {
   display: flex;
   justify-content: center;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.7s;
+  transition-timing-function: ease;
+  &.active {
+    opacity: 1;
+  }
   .informations {
     width: 100%;
     max-width: 980px;
