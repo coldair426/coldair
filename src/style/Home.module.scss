@@ -180,17 +180,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  .project {
-    width: 980px;
+  article {
+    width: 100%;
+    max-width: 980px;
     height: 3400px;
   }
-  .project__title {
-    font-size: 35px;
+  h1 {
+    font-size: 25px;
     font-weight: 900;
-    & > span {
+    span {
       color: $본문글씨;
-      font-size: 25px;
+      font-size: 20px;
     }
   }
   .projects__portfolio {
@@ -199,6 +199,11 @@
 }
 
 .home__informations {
-  width: 980px;
-  padding-top: 63px;
+  display: flex;
+  justify-content: center;
+  .informations {
+    width: 100%;
+    max-width: 980px;
+    padding-top: 63px;
+  }
 }

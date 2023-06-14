@@ -96,53 +96,55 @@ function Home({
           </div>
         </article>
         <article className={hs('home__projects')} id='projects' ref={homeProjectsRef}>
-          <article className={hs('projects__portfolio', 'project')}>
-            <div className={hs('projects__portfolio--title', 'project__title')}>
+          <article className={hs('projects__portfolio')}>
+            <h1 className={hs('projects__portfolio--title')}>
               포트폴리오<span>(개인프로젝트)</span>
-            </div>
+            </h1>
           </article>
-          <article className={hs('projects__breadkun', 'project')}>
-            <div className={hs('projects__breadkun--title', 'project__title')}>
+          <article className={hs('projects__breadkun')}>
+            <h1 className={hs('projects__breadkun--title')}>
               더존 빵돌이<span>(팀프로젝트)</span>
-            </div>
+            </h1>
           </article>
-          <article className={hs('projects__siksunbi', 'project')}>
-            <div className={hs('projects__siksunbi--title', 'project__title')}>
+          <article className={hs('projects__siksunbi')}>
+            <h1 className={hs('projects__siksunbi--title')}>
               식선비<span>(개인프로젝트)</span>
-            </div>
+            </h1>
           </article>
-          <article className={hs('projects__hosaroun-react', 'project')}>
-            <div className={hs('projects__hosaroun-react--title', 'project__title')}>
+          <article className={hs('projects__hosaroun-react')}>
+            <h1 className={hs('projects__hosaroun-react--title')}>
               호사로운<span>(팀프로젝트)</span>
-            </div>
+            </h1>
           </article>
         </article>
         <article className={hs('home__informations')} id='informations' ref={homeInformationsRef}>
-          <div>
-            <div>이름</div>
-            <div>홍찬기</div>
-          </div>
-          <div>
-            <div>생년월일</div>
-            <div>96.04.26</div>
-          </div>
-          <div>
-            <div>카카오톡</div>
-            <div>오픈챗팅링크</div>
-          </div>
-          <div>벨로그</div>
-          <div>깃헙</div>
-          <div>
-            <div>메일</div>
-            <div>coldair426@gmail.com</div>
-          </div>
-          <div>
-            <div>학력</div>
-            <div>강원대학교(춘천)</div>
-          </div>
-          <div>
-            <div>skills</div>
-            <div>JS React 등</div>
+          <div className={hs('informations')}>
+            <div>
+              <div>이름</div>
+              <div>홍찬기</div>
+            </div>
+            <div>
+              <div>생년월일</div>
+              <div>96.04.26</div>
+            </div>
+            <div>
+              <div>카카오톡</div>
+              <div>오픈챗팅링크</div>
+            </div>
+            <div>벨로그</div>
+            <div>깃헙</div>
+            <div>
+              <div>메일</div>
+              <div>coldair426@gmail.com</div>
+            </div>
+            <div>
+              <div>학력</div>
+              <div>강원대학교(춘천)</div>
+            </div>
+            <div>
+              <div>skills</div>
+              <div>JS React 등</div>
+            </div>
           </div>
         </article>
       </div>

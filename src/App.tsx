@@ -4,7 +4,6 @@ import './style/App.scss';
 import { Routes, Route } from 'react-router-dom';
 import Home from './page/Home';
 import Header from './component/Header';
-import Footer from './component/Footer';
 import MenuBox from './component/MenuBox';
 
 function App() {
@@ -34,7 +33,6 @@ function App() {
       <Routes>
         <Route path='/' element={<Home windowInnerWidth={windowInnerWidth} setHomeOutlineBottom={setHomeOutlineBottom} setHomeProjectsBottom={setHomeProjectsBottom} />} />
       </Routes>
-      <Footer />
     </>
   );
 }
