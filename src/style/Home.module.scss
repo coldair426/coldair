@@ -196,25 +196,67 @@
       top: 73px;
       display: inline-flex;
       align-items: center;
-      font-size: 20px;
+      font-size: 35px;
       font-weight: 900;
-      padding: 10px;
+      padding: 5px;
       margin-left: 10px;
-      margin-bottom: 25px;
       -webkit-backdrop-filter: saturate(180%) blur(20px); // 사파리 호환
       backdrop-filter: saturate(180%) blur(20px); // 배경흐리기 속성
       background-color: rgba(29, 29, 31, 0.8);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-      border-radius: 15px;
+      border-radius: 10px;
       img {
         margin-right: 10px;
-        width: 30px;
+        width: 40px;
       }
       span {
         margin-left: 2px;
         letter-spacing: 1px;
         color: $본문글씨;
-        font-size: 15px;
+        font-size: 25px;
+      }
+    }
+    .overview {
+      .overview__period {
+        margin-top: 5px;
+        margin-left: 65px;
+        font-size: 17px;
+        font-weight: 900;
+        color: $본문글씨;
+      }
+      .overview__team {
+        margin-top: 10px;
+        .overview__member {
+          margin-left: 65px;
+          word-break: keep-all;
+          color: $본문글씨;
+          font-size: 23px;
+          font-weight: 900;
+          line-height: 30px;
+        }
+      }
+      .overview__objective {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          margin-top: 150px;
+          width: 100%;
+        }
+      }
+      .overview__stacks {
+        margin-top: 150px;
+        margin-left: 20px;
+        div + div {
+          margin-top: 2px;
+        }
+        img + img {
+          margin-left: 5px;
+        }
+        & img {
+          height: 25px;
+          opacity: 0.9;
+        }
       }
     }
   }
