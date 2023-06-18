@@ -269,83 +269,32 @@
   .projects__portfolio {
     padding-top: 63px;
     .portfolio__imgs {
-      margin-top: 80px;
       display: flex;
-      img {
-        height: 400px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 80px;
+      img + img {
+        margin-left: 30px;
       }
-      .portfolio__imgs--mobile-wrapper {
-        height: 400px;
-        position: relative;
-        margin-left: 40px;
-        > :nth-child(1) {
-          position: absolute;
-          z-index: 10;
-          top: 0;
-          left: 0;
-        }
-        > :nth-child(2) {
-          position: absolute;
-          z-index: 5;
-          top: 0px;
-          left: 50px;
-          &:active {
-            z-index: 15;
-          }
-        }
+      :nth-child(1) {
+        height: 350px;
+      }
+      img {
+        height: 500px;
       }
     }
   }
   .projects__breadkun {
     .breadkun__imgs {
-      display: flex;
-      justify-content: center;
       .breadkun__imgs--wrapper {
-        position: relative;
-        height: 450px;
-        width: 100%;
+        display: flex;
+        justify-content: center;
         margin-top: 80px;
+        img + img {
+          margin-left: 30px;
+        }
         img {
-          position: absolute;
-          top: 0px;
-          height: 450px;
-          &:active {
-            top: -40px;
-            z-index: 10;
-            height: 500px;
-          }
-        }
-        > :nth-child(1) {
-          left: 0px;
-          z-index: 8;
-        }
-        > :nth-child(2) {
-          left: 105px;
-          z-index: 7;
-        }
-        > :nth-child(3) {
-          left: 210px;
-          z-index: 6;
-        }
-        > :nth-child(4) {
-          left: 315px;
-          z-index: 5;
-        }
-        > :nth-child(5) {
-          left: 420px;
-          z-index: 4;
-        }
-        > :nth-child(6) {
-          left: 525px;
-          z-index: 3;
-        }
-        > :nth-child(7) {
-          left: 630px;
-          z-index: 2;
-        }
-        > :nth-child(8) {
-          left: 735px;
-          z-index: 1;
+          height: 500px;
         }
       }
     }
@@ -355,9 +304,12 @@
       margin-top: 80px;
       .ssb__imgs--wrapper {
         display: flex;
-        justify-content: space-around;
-        > img {
-          height: 450px;
+        justify-content: center;
+        img + img {
+          margin-left: 30px;
+        }
+        img {
+          height: 500px;
         }
       }
     }
@@ -367,40 +319,13 @@
       margin-top: 80px;
       .hosaroun__imgs--desktop {
         .hosaroun__imgs--desktop-wrapper {
-          position: relative;
-          height: 350px;
-          > img {
-            position: absolute;
-            top: 0px;
+          display: flex;
+          justify-content: center;
+          img + img {
+            margin-left: 30px;
+          }
+          img {
             height: 350px;
-            &:active {
-              z-index: 10;
-              top: -20px;
-            }
-          }
-          > :nth-child(1) {
-            left: 0px;
-            z-index: 8;
-          }
-          > :nth-child(2) {
-            left: 80px;
-            z-index: 7;
-          }
-          > :nth-child(3) {
-            left: 160px;
-            z-index: 6;
-          }
-          > :nth-child(4) {
-            left: 240px;
-            z-index: 5;
-          }
-          > :nth-child(5) {
-            left: 320px;
-            z-index: 4;
-          }
-          > :nth-child(6) {
-            left: 400px;
-            z-index: 3;
           }
         }
       }
@@ -408,9 +333,12 @@
         margin-top: 80px;
         .hosaroun__imgs--mobile-wrapper {
           display: flex;
-          justify-content: space-around;
-          > img {
-            height: 300px;
+          justify-content: center;
+          img + img {
+            margin-left: 30px;
+          }
+          img {
+            height: 500px;
           }
         }
       }
