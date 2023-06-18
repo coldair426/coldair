@@ -250,6 +250,13 @@ function Home({
                 </div>
               </div>
             </div>
+            <div className={hs('portfolio__imgs')}>
+              <img src='/img/coldair-desk-1.webp' alt='coldair desktop main page' />
+              <div className={hs('portfolio__imgs--mobile-wrapper')}>
+                <img src='/img/coldair-mobile-1.webp' alt='coldair mobile main page' />
+                <img src='/img/coldair-mobile-2.webp' alt='coldair mobile main page' />
+              </div>
+            </div>
             <div className={hs('roadmaps')}></div>
           </article>
           <article className={hs('projects__breadkun', projectsBreadkunStyle)} ref={projectsBreadkunRef}>
@@ -282,6 +289,18 @@ function Home({
                 </div>
               </div>
             </div>
+            <div className={hs('breadkun__imgs')}>
+              <div className={hs('breadkun__imgs--wrapper')}>
+                <img src='/img/breadkun-1.webp' alt='breadkunn main page' />
+                <img src='/img/breadkun-2.webp' alt='breadkunn meal page' />
+                <img src='/img/breadkun-3.webp' alt='breadkunn bus page' />
+                <img src='/img/breadkun-4.webp' alt='breadkunn bus page' />
+                <img src='/img/breadkun-5.webp' alt='breadkunn bus page' />
+                <img src='/img/breadkun-6.webp' alt='breadkunn bread page' />
+                <img src='/img/breadkun-7.webp' alt='breadkunn menu page' />
+                <img src='/img/breadkun-8.webp' alt='breadkunn 404 page' />
+              </div>
+            </div>
             <div className={hs('roadmaps')}></div>
           </article>
           <article className={hs('projects__siksunbi', projectsSiksunbiStyle)} ref={projectsSiksunbiRef}>
@@ -306,9 +325,17 @@ function Home({
                 </div>
               </div>
             </div>
+            <div className={hs('ssb__imgs')}>
+              <div className={hs('ssb__imgs--wrapper')}>
+                <img src='/img/ssb-1.png' alt='siksunbi page' />
+                <img src='/img/ssb-2.png' alt='siksunbi page' />
+                <img src='/img/ssb-3.png' alt='siksunbi page' />
+                <img src='/img/ssb-4.png' alt='siksunbi page' />
+              </div>
+            </div>
             <div className={hs('roadmaps')}></div>
           </article>
-          <article className={hs('projects__hosaroun-react', projectsHosarounStyle)} ref={projectsHosarounRef}>
+          <article className={hs('projects__hosaroun', projectsHosarounStyle)} ref={projectsHosarounRef}>
             <h1>
               <img src='/icon/hosaroun-logo.png' alt='hosaroun project logo' />
               호사로운<span>(팀프로젝트)</span>
@@ -333,6 +360,28 @@ function Home({
                   <img src='https://img.shields.io/badge/HTML5-E34F26?logo=HTML5&logoColor=white' alt='HTML mark' />
                   <img src='https://img.shields.io/badge/CSS3-1572B6?logo=CSS3&logoColor=1572B6&logoColor=white' alt='CSS mark' />
                   <img src='https://img.shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=white' alt='JS mark' />
+                </div>
+              </div>
+            </div>
+            <div className={hs('hosaroun__imgs')}>
+              <div className={hs('hosaroun__imgs--desktop')}>
+                <div className={hs('hosaroun__imgs--desktop-wrapper')}>
+                  <img src='/img/hosaroun-desk-1.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-desk-2.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-desk-3.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-desk-4.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-desk-5.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-desk-6.png' alt='hosaroun page' />
+                </div>
+              </div>
+              <div className={hs('hosaroun__imgs--mobile')}>
+                <div className={hs('hosaroun__imgs--mobile-wrapper')}>
+                  <img src='/img/hosaroun-mobile-1.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-mobile-2.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-mobile-3.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-mobile-4.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-mobile-5.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-mobile-6.png' alt='hosaroun page' />
                 </div>
               </div>
             </div>

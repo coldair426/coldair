@@ -193,10 +193,11 @@
     }
     h1 {
       position: sticky;
+      z-index: 80;
       top: 73px;
       display: inline-flex;
       align-items: center;
-      font-size: 35px;
+      font-size: 23px;
       font-weight: 900;
       padding: 5px;
       margin-left: 10px;
@@ -207,30 +208,32 @@
       border-radius: 10px;
       img {
         margin-right: 10px;
-        width: 40px;
+        width: 30px;
       }
       span {
         margin-left: 2px;
         letter-spacing: 1px;
         color: $본문글씨;
-        font-size: 25px;
+        font-size: 20px;
       }
     }
     .overview {
       .overview__period {
-        margin-top: 5px;
-        margin-left: 65px;
-        font-size: 17px;
+        margin-top: 15px;
+        margin-left: 55px;
+        font-size: 15px;
         font-weight: 900;
+        letter-spacing: 2px;
         color: $본문글씨;
       }
       .overview__team {
         margin-top: 10px;
         .overview__member {
-          margin-left: 65px;
+          margin-left: 55px;
           word-break: keep-all;
           color: $본문글씨;
-          font-size: 23px;
+          font-size: 20px;
+          letter-spacing: 3px;
           font-weight: 900;
           line-height: 30px;
         }
@@ -240,13 +243,16 @@
         justify-content: center;
         align-items: center;
         img {
-          margin-top: 150px;
+          margin-top: 50px;
           width: 100%;
         }
       }
       .overview__stacks {
-        margin-top: 150px;
+        margin-top: 170px;
         margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         div + div {
           margin-top: 2px;
         }
@@ -255,13 +261,160 @@
         }
         & img {
           height: 25px;
-          opacity: 0.9;
+          opacity: 0.8;
         }
       }
     }
   }
   .projects__portfolio {
     padding-top: 63px;
+    .portfolio__imgs {
+      margin-top: 80px;
+      display: flex;
+      img {
+        height: 400px;
+      }
+      .portfolio__imgs--mobile-wrapper {
+        height: 400px;
+        position: relative;
+        margin-left: 40px;
+        > :nth-child(1) {
+          position: absolute;
+          z-index: 10;
+          top: 0;
+          left: 0;
+        }
+        > :nth-child(2) {
+          position: absolute;
+          z-index: 5;
+          top: 0px;
+          left: 50px;
+          &:active {
+            z-index: 15;
+          }
+        }
+      }
+    }
+  }
+  .projects__breadkun {
+    .breadkun__imgs {
+      display: flex;
+      justify-content: center;
+      .breadkun__imgs--wrapper {
+        position: relative;
+        height: 450px;
+        width: 100%;
+        margin-top: 80px;
+        img {
+          position: absolute;
+          top: 0px;
+          height: 450px;
+          &:active {
+            top: -40px;
+            z-index: 10;
+            height: 500px;
+          }
+        }
+        > :nth-child(1) {
+          left: 0px;
+          z-index: 8;
+        }
+        > :nth-child(2) {
+          left: 105px;
+          z-index: 7;
+        }
+        > :nth-child(3) {
+          left: 210px;
+          z-index: 6;
+        }
+        > :nth-child(4) {
+          left: 315px;
+          z-index: 5;
+        }
+        > :nth-child(5) {
+          left: 420px;
+          z-index: 4;
+        }
+        > :nth-child(6) {
+          left: 525px;
+          z-index: 3;
+        }
+        > :nth-child(7) {
+          left: 630px;
+          z-index: 2;
+        }
+        > :nth-child(8) {
+          left: 735px;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  .projects__siksunbi {
+    .ssb__imgs {
+      margin-top: 80px;
+      .ssb__imgs--wrapper {
+        display: flex;
+        justify-content: space-around;
+        > img {
+          height: 450px;
+        }
+      }
+    }
+  }
+  .projects__hosaroun {
+    .hosaroun__imgs {
+      margin-top: 80px;
+      .hosaroun__imgs--desktop {
+        .hosaroun__imgs--desktop-wrapper {
+          position: relative;
+          height: 350px;
+          > img {
+            position: absolute;
+            top: 0px;
+            height: 350px;
+            &:active {
+              z-index: 10;
+              top: -20px;
+            }
+          }
+          > :nth-child(1) {
+            left: 0px;
+            z-index: 8;
+          }
+          > :nth-child(2) {
+            left: 80px;
+            z-index: 7;
+          }
+          > :nth-child(3) {
+            left: 160px;
+            z-index: 6;
+          }
+          > :nth-child(4) {
+            left: 240px;
+            z-index: 5;
+          }
+          > :nth-child(5) {
+            left: 320px;
+            z-index: 4;
+          }
+          > :nth-child(6) {
+            left: 400px;
+            z-index: 3;
+          }
+        }
+      }
+      .hosaroun__imgs--mobile {
+        margin-top: 80px;
+        .hosaroun__imgs--mobile-wrapper {
+          display: flex;
+          justify-content: space-around;
+          > img {
+            height: 300px;
+          }
+        }
+      }
+    }
   }
 }
 
