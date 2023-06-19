@@ -226,6 +226,19 @@
         letter-spacing: 2px;
         color: $제목글씨;
       }
+      .overview__stacks {
+        display: flex;
+        align-items: center;
+        margin-top: 12px;
+        margin-left: 55px;
+        img + img {
+          margin-left: 5px;
+        }
+        img {
+          height: 20px;
+          opacity: 0.8;
+        }
+      }
       .overview__team {
         margin-top: 10px;
         .overview__member {
@@ -243,14 +256,14 @@
         justify-content: center;
         align-items: center;
         img {
-          margin-top: 20px;
+          margin-top: 60px;
           width: 100%;
         }
       }
       .overview__links {
         display: flex;
         justify-content: center;
-        margin-top: 15px;
+        margin-top: 30px;
         a + a {
           margin-left: 25px;
         }
@@ -263,23 +276,6 @@
           padding: 10px 15px 10px 15px;
         }
       }
-      .overview__stacks {
-        margin-top: 250px;
-        margin-left: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        div + div {
-          margin-top: 5px;
-        }
-        img + img {
-          margin-left: 8px;
-        }
-        & img {
-          height: 30px;
-          opacity: 0.8;
-        }
-      }
     }
   }
   .projects__portfolio {
@@ -288,7 +284,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 250px;
+      margin-top: 150px;
       img + img {
         margin-left: 30px;
       }
@@ -305,7 +301,7 @@
       .breadkun__imgs--wrapper {
         display: flex;
         justify-content: center;
-        margin-top: 250px;
+        margin-top: 150px;
         img + img {
           margin-left: 30px;
         }
@@ -317,7 +313,7 @@
   }
   .projects__siksunbi {
     .ssb__imgs {
-      margin-top: 250px;
+      margin-top: 150px;
       .ssb__imgs--wrapper {
         display: flex;
         justify-content: center;
@@ -332,7 +328,7 @@
   }
   .projects__hosaroun {
     .hosaroun__imgs {
-      margin-top: 250px;
+      margin-top: 150px;
       .hosaroun__imgs--desktop {
         .hosaroun__imgs--desktop-wrapper {
           display: flex;

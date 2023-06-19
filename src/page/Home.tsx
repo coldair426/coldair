@@ -232,6 +232,16 @@ function Home({
             </h1>
             <div className={hs('overview')}>
               <div className={hs('overview__period')}>(23.05.28 ~ )</div>
+              <div className={hs('overview__stacks')}>
+                <img src='https://img.shields.io/badge/VSCode-007ACC?logo=visual studio code' alt='vscode mark' />
+                <img src='https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white' alt='git mark' />
+                <img src='https://img.shields.io/badge/GitHub-181717?logo=github' alt='github mark' />
+                <img src='https://img.shields.io/badge/Firebase-FFCA28?logo=Firebase&logoColor=white' alt='firebase mark' />
+                <img src='https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white' alt='react mark' />
+                <img src='https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white' alt='Ts mark' />
+                <img src='https://img.shields.io/badge/SASS-CC6699?logo=SASS&logoColor=white' alt='sass mark' />
+                <img src='https://img.shields.io/badge/CSSModules-000000?logo=cssmodules&logoColor=white' alt='css module mark' />
+              </div>
               <div className={hs('overview__objective')}>
                 <img src='/img/portfolio-objective.webp' alt='portfolio objective img' />
               </div>
@@ -245,20 +255,6 @@ function Home({
                 <a href='https://velog.io/@coldair426/series/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4'>
                   <div style={{ backgroundColor: '#87CBB9', color: '#31334B' }}>Blog 바로가기</div>
                 </a>
-              </div>
-              <div className={hs('overview__stacks')}>
-                <div className={hs('overview__environment')}>
-                  <img src='https://img.shields.io/badge/VSCode-007ACC?logo=visual studio code' alt='vscode mark' />
-                  <img src='https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white' alt='git mark' />
-                  <img src='https://img.shields.io/badge/GitHub-181717?logo=github' alt='github mark' />
-                  <img src='https://img.shields.io/badge/Firebase-FFCA28?logo=Firebase&logoColor=white' alt='firebase mark' />
-                </div>
-                <div className={hs('overview__development')}>
-                  <img src='https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white' alt='react mark' />
-                  <img src='https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white' alt='Ts mark' />
-                  <img src='https://img.shields.io/badge/SASS-CC6699?logo=SASS&logoColor=white' alt='sass mark' />
-                  <img src='https://img.shields.io/badge/CSSModules-000000?logo=cssmodules&logoColor=white' alt='css module mark' />
-                </div>
               </div>
             </div>
             <div className={hs('portfolio__imgs')}>
@@ -275,6 +271,16 @@ function Home({
             </h1>
             <div className={hs('overview')}>
               <div className={hs('overview__period')}>(23.04.04 ~ 23.05.23)</div>
+              <div className={hs('overview__stacks')}>
+                <img src='https://img.shields.io/badge/VSCode-007ACC?logo=visual studio code' alt='vscode mark' />
+                <img src='https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white' alt='git mark' />
+                <img src='https://img.shields.io/badge/GitHub-181717?logo=github' alt='github mark' />
+                <img src='https://img.shields.io/badge/Firebase-FFCA28?logo=Firebase&logoColor=white' alt='firebase mark' />
+                <img src='https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white' alt='react mark' />
+                <img src='https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white' alt='Ts mark' />
+                <img src='https://img.shields.io/badge/SASS-CC6699?logo=SASS&logoColor=white' alt='sass mark' />
+                <img src='https://img.shields.io/badge/CSSModules-000000?logo=cssmodules&logoColor=white' alt='css module mark' />
+              </div>
               <div className={hs('overview__team')}>
                 <div className={hs('overview__member')}>
                   이 프로젝트는 프론트엔드(1명)와 백엔드(1명)로 총 2명으로 구성된 팀으로 진행되었으며, 저는 프론트엔드 포지션으로 참여하였습니다.{' '}
@@ -295,20 +301,6 @@ function Home({
                   <div style={{ backgroundColor: '#7D2020', color: '#ECECEB' }}>Blog 바로가기</div>
                 </a>
               </div>
-              <div className={hs('overview__stacks')}>
-                <div className={hs('overview__environment')}>
-                  <img src='https://img.shields.io/badge/VSCode-007ACC?logo=visual studio code' alt='vscode mark' />
-                  <img src='https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white' alt='git mark' />
-                  <img src='https://img.shields.io/badge/GitHub-181717?logo=github' alt='github mark' />
-                  <img src='https://img.shields.io/badge/Firebase-FFCA28?logo=Firebase&logoColor=white' alt='firebase mark' />
-                </div>
-                <div className={hs('overview__development')}>
-                  <img src='https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white' alt='react mark' />
-                  <img src='https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white' alt='Ts mark' />
-                  <img src='https://img.shields.io/badge/SASS-CC6699?logo=SASS&logoColor=white' alt='sass mark' />
-                  <img src='https://img.shields.io/badge/CSSModules-000000?logo=cssmodules&logoColor=white' alt='css module mark' />
-                </div>
-              </div>
             </div>
             <div className={hs('breadkun__imgs')}>
               <div className={hs('breadkun__imgs--wrapper')}>
@@ -327,6 +319,13 @@ function Home({
             </h1>
             <div className={hs('overview')}>
               <div className={hs('overview__period')}>(23.02.26 ~ 23.03.07)</div>
+              <div className={hs('overview__stacks')}>
+                <img src='https://img.shields.io/badge/VSCode-007ACC?logo=visual studio code' alt='vscode mark' />
+                <img src='https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white' alt='git mark' />
+                <img src='https://img.shields.io/badge/GitHub-181717?logo=github' alt='github mark' />
+                <img src='https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white' alt='react mark' />
+                <img src='https://img.shields.io/badge/CSS-1572B6?logo=CSS3&logoColor=white' alt='CSS mark' />
+              </div>
               <div className={hs('overview__objective')}>
                 <img src='/img/ssb-objective.webp' alt='ssb objective img' />
               </div>
@@ -341,24 +340,13 @@ function Home({
                   <div style={{ backgroundColor: '#F0A500', color: '#ECECEB' }}>Blog 바로가기</div>
                 </a>
               </div>
-              <div className={hs('overview__stacks')}>
-                <div className={hs('overview__environment')}>
-                  <img src='https://img.shields.io/badge/VSCode-007ACC?logo=visual studio code' alt='vscode mark' />
-                  <img src='https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white' alt='git mark' />
-                  <img src='https://img.shields.io/badge/GitHub-181717?logo=github' alt='github mark' />
-                </div>
-                <div className={hs('overview__development')}>
-                  <img src='https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white' alt='react mark' />
-                  <img src='https://img.shields.io/badge/CSS-1572B6?logo=CSS3&logoColor=white' alt='CSS mark' />
-                </div>
-              </div>
             </div>
             <div className={hs('ssb__imgs')}>
               <div className={hs('ssb__imgs--wrapper')}>
-                <img src='/img/ssb-1.png' alt='siksunbi page' />
-                <img src='/img/ssb-2.png' alt='siksunbi page' />
-                <img src='/img/ssb-3.png' alt='siksunbi page' />
-                <img src='/img/ssb-4.png' alt='siksunbi page' />
+                <img src='/img/ssb-1.webp' alt='siksunbi page' />
+                <img src='/img/ssb-2.webp' alt='siksunbi page' />
+                <img src='/img/ssb-3.webp' alt='siksunbi page' />
+                <img src='/img/ssb-4.webp' alt='siksunbi page' />
               </div>
             </div>
             <div className={hs('roadmaps')}></div>
@@ -370,12 +358,28 @@ function Home({
             </h1>
             <div className={hs('overview')}>
               <div className={hs('overview__period')}>(23.01.05 ~ 23.01.29)</div>
+              <div className={hs('overview__stacks')}>
+                <img src='https://img.shields.io/badge/VSCode-007ACC?logo=visual studio code' alt='vscode mark' />
+                <img src='https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white' alt='git mark' />
+                <img src='https://img.shields.io/badge/GitHub-181717?logo=github' alt='github mark' />
+                <img src='https://img.shields.io/badge/HTML5-E34F26?logo=HTML5&logoColor=white' alt='HTML mark' />
+                <img src='https://img.shields.io/badge/CSS-1572B6?logo=CSS3&logoColor=1572B6&logoColor=white' alt='CSS mark' />
+                <img src='https://img.shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=white' alt='JS mark' />
+              </div>
               <div className={hs('overview__team')}>
                 <div className={hs('overview__member')}>
                   이 프로젝트는 프론트엔드 2명으로 구성된 팀으로 진행되었으며, 저는 Index, Overview, Rooms, Booknow, Contactus 페이지를 담당하였습니다.
                 </div>
               </div>
               <div className={hs('overview__period')}>(23.02.21 ~ 23.02.24)</div>
+              <div className={hs('overview__stacks')}>
+                <img src='https://img.shields.io/badge/VSCode-007ACC?logo=visual studio code' alt='vscode mark' />
+                <img src='https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white' alt='git mark' />
+                <img src='https://img.shields.io/badge/GitHub-181717?logo=github' alt='github mark' />
+                <img src='https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white' alt='react mark' />
+                <img src='https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white' alt='Bootstrap mark' />
+                <img src='https://img.shields.io/badge/CSS-1572B6?logo=CSS3&logoColor=white' alt='CSS mark' />
+              </div>
               <div className={hs('overview__team')}>
                 <div className={hs('overview__member')}>
                   서비스를 Vanilla JS에서 React로 리팩토링 하였습니다. <u>실제 운영 중인 서비스입니다.</u>
@@ -398,36 +402,20 @@ function Home({
                   <div style={{ backgroundColor: '#a1a1a6', color: '#000000' }}>Blog 바로가기</div>
                 </a>
               </div>
-              <div className={hs('overview__stacks')}>
-                <div className={hs('overview__environment')}>
-                  <img src='https://img.shields.io/badge/VSCode-007ACC?logo=visual studio code' alt='vscode mark' />
-                  <img src='https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white' alt='git mark' />
-                  <img src='https://img.shields.io/badge/GitHub-181717?logo=github' alt='github mark' />
-                </div>
-                <div className={hs('overview__development')}>
-                  <img src='https://img.shields.io/badge/HTML5-E34F26?logo=HTML5&logoColor=white' alt='HTML mark' />
-                  <img src='https://img.shields.io/badge/CSS-1572B6?logo=CSS3&logoColor=1572B6&logoColor=white' alt='CSS mark' />
-                  <img src='https://img.shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=white' alt='JS mark' />
-                  <img src='/icon/arrow-right.png' alt='right arrow' />
-                  <img src='https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white' alt='react mark' />
-                  <img src='https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white' alt='Bootstrap mark' />
-                  <img src='https://img.shields.io/badge/CSS-1572B6?logo=CSS3&logoColor=white' alt='CSS mark' />
-                </div>
-              </div>
             </div>
             <div className={hs('hosaroun__imgs')}>
               <div className={hs('hosaroun__imgs--desktop')}>
                 <div className={hs('hosaroun__imgs--desktop-wrapper')}>
-                  <img src='/img/hosaroun-desk-1.png' alt='hosaroun page' />
-                  <img src='/img/hosaroun-desk-3.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-desk-1.webp' alt='hosaroun page' />
+                  <img src='/img/hosaroun-desk-3.webp' alt='hosaroun page' />
                 </div>
               </div>
               <div className={hs('hosaroun__imgs--mobile')}>
                 <div className={hs('hosaroun__imgs--mobile-wrapper')}>
-                  <img src='/img/hosaroun-mobile-1.png' alt='hosaroun page' />
-                  <img src='/img/hosaroun-mobile-2.png' alt='hosaroun page' />
-                  <img src='/img/hosaroun-mobile-3.png' alt='hosaroun page' />
-                  <img src='/img/hosaroun-mobile-4.png' alt='hosaroun page' />
+                  <img src='/img/hosaroun-mobile-1.webp' alt='hosaroun page' />
+                  <img src='/img/hosaroun-mobile-2.webp' alt='hosaroun page' />
+                  <img src='/img/hosaroun-mobile-3.webp' alt='hosaroun page' />
+                  <img src='/img/hosaroun-mobile-4.webp' alt='hosaroun page' />
                 </div>
               </div>
             </div>
