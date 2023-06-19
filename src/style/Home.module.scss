@@ -221,24 +221,24 @@
     }
     .overview {
       .overview__period {
-        margin-top: 15px;
+        margin-top: 13px;
         margin-left: 55px;
-        font-size: 15px;
+        font-size: 18px;
         font-weight: 900;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         color: $제목글씨;
       }
       .overview__stacks {
         display: flex;
         align-items: center;
-        margin-top: 12px;
+        margin-top: 13px;
         margin-left: 55px;
         img + img {
-          margin-left: 5px;
+          margin-left: 4px;
         }
         img {
-          height: 20px;
-          opacity: 0.8;
+          height: 22px;
+          opacity: 0.95;
         }
       }
       .overview__team {
@@ -247,8 +247,8 @@
           margin-left: 55px;
           word-break: keep-all;
           color: $본문글씨;
-          font-size: 20px;
-          letter-spacing: 2px;
+          font-size: 23px;
+          letter-spacing: 1px;
           font-weight: 900;
           line-height: 30px;
         }
@@ -258,8 +258,8 @@
         justify-content: center;
         align-items: center;
         img {
-          margin-top: 60px;
-          width: 100%;
+          margin-top: 120px;
+          width: 900px;
         }
       }
       .overview__links {
@@ -279,15 +279,39 @@
         }
       }
     }
+    .roadmaps {
+      margin-top: 150px;
+      div + div {
+        margin-top: 18px;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        font-size: 23px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin-left: 80px;
+        color: $본문글씨;
+        span {
+          color: $제목글씨;
+          margin-top: 15px;
+          font-size: 25px;
+        }
+        img {
+          height: 13px;
+          margin-right: 10px;
+        }
+      }
+    }
     .main-functions {
       margin-top: 150px;
       padding: 0 60px;
-      opacity: 0.9;
+      opacity: 0.85;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       .function {
-        margin: 50px 0;
+        margin: 70px 0;
         width: 250px;
         .function__title {
           font-weight: 900;
@@ -300,30 +324,6 @@
           font-size: 20px;
           letter-spacing: 1px;
           line-height: 30px;
-        }
-      }
-    }
-    .roadmaps {
-      margin-top: 150px;
-      div + div {
-        margin-top: 15px;
-      }
-      div {
-        display: flex;
-        align-items: center;
-        font-size: 20px;
-        font-weight: 900;
-        letter-spacing: 1px;
-        margin-left: 55px;
-        color: $본문글씨;
-        span {
-          color: $제목글씨;
-          margin-top: 15px;
-          font-size: 22px;
-        }
-        img {
-          height: 13px;
-          margin-right: 10px;
         }
       }
     }
