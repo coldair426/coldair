@@ -121,6 +121,7 @@
       font-weight: 900;
       transition: opacity 0.7s;
       transition-timing-function: ease;
+      letter-spacing: 2px;
       @include home-desktop {
         font-size: 75px;
       }
@@ -155,6 +156,7 @@
       word-break: keep-all;
       transition: opacity 0.7s;
       transition-timing-function: ease;
+      letter-spacing: 1px;
       @include home-desktop {
         font-size: 30px;
       }
@@ -246,7 +248,7 @@
           word-break: keep-all;
           color: $본문글씨;
           font-size: 20px;
-          letter-spacing: 3px;
+          letter-spacing: 2px;
           font-weight: 900;
           line-height: 30px;
         }
@@ -274,6 +276,29 @@
           font-weight: 900;
           border-radius: 20px;
           padding: 10px 15px 10px 15px;
+        }
+      }
+    }
+    .roadmaps {
+      margin-top: 150px;
+      div + div {
+        margin-top: 20px;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 900;
+        letter-spacing: 1px;
+        margin-left: 55px;
+        color: $본문글씨;
+        span {
+          margin-top: 15px;
+          font-size: 30px;
+        }
+        img {
+          height: 15px;
+          margin-right: 12px;
         }
       }
     }

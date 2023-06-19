@@ -219,8 +219,8 @@ function Home({
               </div>
             )}
             <div className={hs('outline__mantra--explanation', outlineMantraExplanationStyle)}>
-              프론트엔드 개발은 사용자와 직접 대면하는 것이라고 믿습니다. 섬세하게 구현하고 변하는 트렌드와 기술을 빠르게 습득해 최상의 결과물을 만들기 위해 노력합니다. 모든
-              사용자가 직관적으로 사용하고, 편안함을 느끼면 좋겠습니다.
+              프론트엔드 개발은 사용자와 직접 대면하는 것이라고 믿습니다. 섬세하게 구현하고 변하는 트렌드와 기술을 빠르게 습득해 최상의 결과물을 만들고자 노력합니다. 사용자가
+              직관적으로 사용하고, 편안함을 느끼면 좋겠습니다.
             </div>
           </div>
         </article>
@@ -262,7 +262,25 @@ function Home({
               <img src='/img/coldair-mobile-1.webp' alt='coldair mobile main page' />
               <img src='/img/coldair-mobile-2.webp' alt='coldair mobile main page' />
             </div>
-            <div className={hs('roadmaps')}></div>
+            <div className={hs('main-function')}></div>
+            <div className={hs('roadmaps')}>
+              <div>
+                <img src='/icon/portfolio-check-mark.webp' alt='check mark' />
+                반응형 웹(Responsive Web)
+              </div>
+              <div>
+                <img src='/icon/portfolio-check-mark.webp' alt='check mark' />
+                빌드 및 배포 자동화; CI/CD(GitHub Actions, Firebase)
+              </div>
+              <div>
+                <img src='/icon/portfolio-check-mark.webp' alt='check mark' />
+                PWA(Progressive Web App) 설정
+              </div>
+              <div>
+                <img src='/icon/portfolio-check-mark.webp' alt='check mark' />
+                Cross-browsing을 위한 CSS reset(styled-reset)
+              </div>
+            </div>
           </article>
           <article className={hs('projects__breadkun', projectsBreadkunStyle)} ref={projectsBreadkunRef}>
             <h1>
@@ -310,7 +328,65 @@ function Home({
                 <img src='/img/breadkun-5.webp' alt='breadkunn bus page' />
               </div>
             </div>
-            <div className={hs('roadmaps')}></div>
+            <div className={hs('main-function')}></div>
+            <div className={hs('roadmaps')}>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                최근 옵션(회사, 버스종착지) 저장(local storage)
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                식단(Meal)의 일주일 날짜 표시 및 현재 날짜 및 식단 자동 선택 로직
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                빌드 및 배포 자동화; CI/CD(GitHub Actions, Firebase)
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                SEO(Search Engine Optimization)
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                PWA(Progressive Web App) 설정
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                대시보드(Home)의 날씨와 미세먼지 Api 연결(Open Api)
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                버스(Bus)에서 사용자 현재위치 정보 가져오기(Web Api)
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                버스(Bus)의 현재위치와 각종 정류장 위치정보 맵에 표시(Kakao Api)
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                버스(Bus)의 현재위치로 부터 남은시간 받는 Api 연결(Back-end)
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                카카오톡 플러스친구에서 링크 제공을 위한 URL 파라미터(react-router-dom)
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                Api Key env 저장
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                404Ppage
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                Cross-browsing을 위한 CSS reset(styled-reset)
+              </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                Router(react-router-dom)
+              </div>
+            </div>
           </article>
           <article className={hs('projects__siksunbi', projectsSiksunbiStyle)} ref={projectsSiksunbiRef}>
             <h1>
@@ -349,11 +425,49 @@ function Home({
                 <img src='/img/ssb-4.webp' alt='siksunbi page' />
               </div>
             </div>
-            <div className={hs('roadmaps')}></div>
+            <div className={hs('main-function')}></div>
+            <div className={hs('roadmaps')}>
+              <div>
+                <img src='/icon/ssb-check-mark.webp' alt='check mark' />
+                URL 파라미터를 이용한 식당 구분(react-router-dom)
+              </div>
+              <div>
+                <img src='/icon/ssb-check-mark.webp' alt='check mark' />
+                QR코드 생성 Api 연결
+              </div>
+              <div>
+                <img src='/icon/ssb-check-mark.webp' alt='check mark' />
+                {`<SlideBox>`}의 블러 및 고정효과
+              </div>
+              <div>
+                <img src='/icon/ssb-check-mark.webp' alt='check mark' />
+                메뉴판 내부의 세부메뉴 가로 스크롤
+              </div>
+              <div>
+                <img src='/icon/ssb-check-mark.webp' alt='check mark' />
+                웹폰트 적용
+              </div>
+              <div>
+                <img src='/icon/ssb-check-mark.webp' alt='check mark' />
+                대시보드의 최근 추가된 메뉴판
+              </div>
+              <div>
+                <img src='/icon/ssb-check-mark.webp' alt='check mark' />
+                404페이지
+              </div>
+              <div>
+                <img src='/icon/ssb-check-mark.webp' alt='check mark' />
+                Cross-browsing을 위한 CSS reset(styled-reset)
+              </div>
+              <div>
+                <img src='/icon/ssb-check-mark.webp' alt='check mark' />
+                Router(react-router-dom)
+              </div>
+            </div>
           </article>
           <article className={hs('projects__hosaroun', projectsHosarounStyle)} ref={projectsHosarounRef}>
             <h1>
-              <img src='/icon/hosaroun-logo.png' alt='hosaroun project logo' />
+              <img src='/icon/hosaroun-logo.webp' alt='hosaroun project logo' />
               호사로운<span>(팀프로젝트)</span>
             </h1>
             <div className={hs('overview')}>
@@ -390,16 +504,16 @@ function Home({
               </div>
               <div className={hs('overview__links')}>
                 <a href='http://hosaroun.dothome.co.kr/'>
-                  <div style={{ backgroundColor: '#a1a1a6', color: '#000000' }}>서비스 바로가기</div>
+                  <div style={{ backgroundColor: '#ECECEB', color: '#000000' }}>서비스 바로가기</div>
                 </a>
                 <a href='https://github.com/coldair426/hosaroun'>
-                  <div style={{ backgroundColor: '#a1a1a6', color: '#000000' }}>GitHub 바로가기</div>
+                  <div style={{ backgroundColor: '#ECECEB', color: '#000000' }}>GitHub 바로가기</div>
                 </a>
                 <a href='https://github.com/coldair426/hosaroun-React'>
-                  <div style={{ backgroundColor: '#a1a1a6', color: '#000000' }}>GitHub(React) 바로가기</div>
+                  <div style={{ backgroundColor: '#ECECEB', color: '#000000' }}>GitHub(React) 바로가기</div>
                 </a>
                 <a href='https://velog.io/@coldair426/series/%ED%98%B8%EC%82%AC%EB%A1%9C%EC%9A%B4%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8'>
-                  <div style={{ backgroundColor: '#a1a1a6', color: '#000000' }}>Blog 바로가기</div>
+                  <div style={{ backgroundColor: '#ECECEB', color: '#000000' }}>Blog 바로가기</div>
                 </a>
               </div>
             </div>
@@ -419,7 +533,87 @@ function Home({
                 </div>
               </div>
             </div>
-            <div className={hs('roadmaps')}></div>
+            <div className={hs('main-function')}></div>
+            <div className={hs('roadmaps')}>
+              <div>
+                <span>Vanilla JS</span>
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Responsive Web(CSS)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Mobile sticky header(CSS)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                PC sticky header(JS)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Mobile navigation menu(JS)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                현재 페이지 표시(JS)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Carousel slider(JS)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Image preloading(JS)
+              </div>
+              <div>
+                <span>React</span>
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                SEO(Search Engine Optimization)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Copy alert(React Bootstrap)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Carousel slider(React Bootstrap)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Location map(Kakao map api)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                현재 페이지 표시(React Router-dom)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Responsive Web(CSS)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Mobile sticky header(CSS)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Mobile navigation box(React)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                PC navigation bar(React)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                CSS reset(styled-reset)
+              </div>
+              <div>
+                <img src='/icon/hosaroun-check-mark.webp' alt='check mark' />
+                Router(React Router-dom)
+              </div>
+            </div>
           </article>
         </article>
         <article className={hs('home__informations', homeInformationsStyle)} id='informations' ref={homeInformationsRef}>
