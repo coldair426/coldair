@@ -262,7 +262,34 @@ function Home({
               <img src='/img/coldair-mobile-1.webp' alt='coldair mobile main page' />
               <img src='/img/coldair-mobile-2.webp' alt='coldair mobile main page' />
             </div>
-            <div className={hs('main-function')}></div>
+            <div className={hs('main-functions')} style={{ backgroundColor: '#87CBB9' }}>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#000000' }}>
+                  프로젝트
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#31334B' }}>
+                  각 프로젝트 섹션에서는 목표, 개요, 사용된 기술 및 도구, 결과물에 대한 설명을 제공합니다. 또한, 프로젝트에 대한 스크린샷, 개발 과정의 세부 내용을 볼 수 있는 기술
+                  블로그(벨로그), 원격저장소(깃허브), 실제 서비스 링크 등의 근거를 제공합니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#000000' }}>
+                  연락정보
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#31334B' }}>
+                  개발을 처음 시작했을 때부터 지금까지의 학습 과정과 문제 해결 과정을 상세하게 정리한 기술 블로그(벨로그)와 원격저장소(깃허브) 링크를 제공합니다. 또한,
+                  카카오톡(오픈채팅링크)과 메일 링크를 제공해 소통을 용이하게 합니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#000000' }}>
+                  반응형 웹
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#31334B' }}>
+                  다양한 디바이스와 화면 크기에서 최적의 사용자 경험을 제공합니다. 데스크톱, 태블릿, 스마트폰 등 다양한 환경에서 편리하게 이용할 수 있습니다.
+                </div>
+              </div>
+            </div>
             <div className={hs('roadmaps')}>
               <div>
                 <img src='/icon/portfolio-check-mark.webp' alt='check mark' />
@@ -328,7 +355,59 @@ function Home({
                 <img src='/img/breadkun-5.webp' alt='breadkunn bus page' />
               </div>
             </div>
-            <div className={hs('main-function')}></div>
+            <div className={hs('main-functions')} style={{ backgroundColor: '#7D2020' }}>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#ECECEB' }}>
+                  검색 엔진 최적화
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#a1a1a6' }}>
+                  검색 엔진 최적화를 통해 네이버와 구글에서 더존 빵돌이를 상단 노출시켜 사용자들의 높은 접근성을 제공합니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#ECECEB' }}>
+                  모바일 최적화 및 사용자 경험
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#a1a1a6' }}>
+                  모바일 환경에 최적화된 디자인을 가지고 있습니다. 다양한 모바일 디바이스에서 사용자들은 직관적이고 일관된 사용자 경험을 얻을 수 있으며, 모바일 앱과 유사한 편리함을
+                  느낄 수 있습니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#ECECEB' }}>
+                  PWA
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#a1a1a6' }}>
+                  Progressive Web App(PWA)로 제공되어, 사용자들이 웹 브라우저에서 손쉽게 앱 형태로 이용할 수 있습니다. 사용자들은 앱 설치 없이도 편리하게 더존 빵돌이를 이용할 수
+                  있으며, 지속적인 업데이트로 완성도와 사용성을 개선할 예정입니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#ECECEB' }}>
+                  통근 버스 정보
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#a1a1a6' }}>
+                  더존비즈온 통근 버스 정보를 제공합니다. 사용자들은 특정 버스 노선의 정류장 위치, 실시간 도착 예정 시간을 확인할 수 있어 교통 계획을 효율적으로 조정할 수 있습니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#ECECEB' }}>
+                  식단
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#a1a1a6' }}>
+                  더존비즈온 구내식당과 사내베이커리의 다양한 식단을 빠르고 간편하게 확인할 수 있어 건강한 식사 계획을 세우기에 효과적입니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#ECECEB' }}>
+                  대시보드
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#a1a1a6' }}>
+                  대시보드에는 더존비즈온 회사 위치 기반의 날씨와 미세먼지 농도 정보가 표시됩니다. 또한, 사용자들이 자주 이용하는 기능에 빠르게 액세스할 수 있는 단축 아이콘을
+                  제공하여 사용자 편의성을 최대화합니다.
+                </div>
+              </div>
+            </div>
             <div className={hs('roadmaps')}>
               <div>
                 <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
@@ -425,7 +504,33 @@ function Home({
                 <img src='/img/ssb-4.webp' alt='siksunbi page' />
               </div>
             </div>
-            <div className={hs('main-function')}></div>
+            <div className={hs('main-functions')} style={{ backgroundColor: '#F0A500' }}>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#f5f5f7' }}>
+                  메뉴판
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#ECECEB' }}>
+                  간편하게 음식점의 모바일 메뉴판을 생성할 수 있고, 누구나 편하게 접속 할 수 있습니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#f5f5f7' }}>
+                  QR코드
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#ECECEB' }}>
+                  음식점의 모바일 메뉴판 URL을 QR코드로 제공하고, 이를 통해 손님이 테이블에서 간편하게 접속할 수 있습니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#f5f5f7' }}>
+                  모바일 최적화 및 사용자 경험
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#ECECEB' }}>
+                  모바일 환경에 최적화된 디자인을 가지고 있습니다. 다양한 모바일 디바이스에서 사용자들은 직관적이고 일관된 사용자 경험을 얻을 수 있으며, 모바일 앱과 유사한 편리함을
+                  느낄 수 있습니다.
+                </div>
+              </div>
+            </div>
             <div className={hs('roadmaps')}>
               <div>
                 <img src='/icon/ssb-check-mark.webp' alt='check mark' />
@@ -533,7 +638,53 @@ function Home({
                 </div>
               </div>
             </div>
-            <div className={hs('main-function')}></div>
+            <div className={hs('main-functions')} style={{ backgroundColor: '#ECECEB' }}>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#000000' }}>
+                  프리로드(Vanilla JS)
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#31334b' }}>
+                  리팩토링 전(Vanilla JS) 이미지 캐로셀의 1~2s의 딜레이를 동기적 프리로드(페이지 로드 직후)를 통해 사용자가 느끼지 못하게 처리하여 쾌적한 경험을 제공했었습니다. (약
+                  6ms)
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#000000' }}>
+                  검색 엔진 최적화(SEO)
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#31334b' }}>
+                  검색 엔진 최적화를 통해 네이버와 구글에서 호사로운을 상단 노출시켜 사용자들의 높은 접근성을 제공합니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#000000' }}>
+                  코드 컨벤션
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#31334b' }}>
+                  협업 과정에서 어려움을 느껴 미팅을 통해 BEM(Block, Element, Modifier) 방법론을 채택 하였습니다. 모든 코드에 적용해 협업 효율, 가독성, 유지보수 효율을 높혔습니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#000000' }}>
+                  카카오맵 API
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#31334b' }}>
+                  카카오맵 API를 이용해 위치를 정확하게 표현하고, 지도보기와 길찾기 링크를 제공합니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#000000' }}>
+                  사진
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#31334b' }}>
+                  캐로셀 슬라이더를 이용해 다양한 사진을 효과적으로 제공합니다.
+                </div>
+              </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#000000' }}></div>
+                <div className={hs('function__explanation')} style={{ color: '#31334b' }}></div>
+              </div>
+            </div>
             <div className={hs('roadmaps')}>
               <div>
                 <span>Vanilla JS</span>
