@@ -189,7 +189,7 @@
     opacity: 0;
     transition: opacity 0.7s;
     transition-timing-function: ease;
-    padding-bottom: 65vh;
+    padding-bottom: calc(65vh - 80px);
     &.active {
       opacity: 1;
     }
@@ -411,8 +411,8 @@
 .home__informations {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
-  height: 100vh;
+  padding-top: 80px;
+  padding-bottom: 400px;
   opacity: 0;
   transition: opacity 0.7s;
   transition-timing-function: ease;
@@ -420,8 +420,46 @@
     opacity: 1;
   }
   .informations {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 980px;
     padding-top: 63px;
+    .informations__about-me {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .informations__about-me--img {
+        height: 400px;
+      }
+      .informations__about-me--texts {
+        margin-right: 30px;
+        font-size: 20px;
+        // 홍찬기
+        > div:nth-child(1) {
+          font-size: 35px;
+          font-weight: 900;
+          letter-spacing: 10px;
+          margin-bottom: 20px;
+        }
+        .informations__about-me--text {
+          // 제목
+          > div:nth-child(1) {
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            margin-bottom: 10px;
+          }
+          // 내용
+          > div:nth-child(2) {
+            color: $본문글씨;
+          }
+        }
+        .informations__about-me--text + .informations__about-me--text {
+          margin-top: 15px;
+        }
+      }
+    }
   }
 }

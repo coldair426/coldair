@@ -766,31 +766,41 @@ function Home({
         </article>
         <article className={hs('home__informations', homeInformationsStyle)} id='informations' ref={homeInformationsRef}>
           <div className={hs('informations')}>
-            <div>
-              <div>이름</div>
-              <div>홍찬기</div>
+            <div className={hs('informations__about-me')}>
+              <img className={hs('informations__about-me--img')} src='/img/informations-img.webp' alt='information-img' />
+              <div className={hs('informations__about-me--texts')}>
+                <div>홍찬기</div>
+                <div className={hs('informations__about-me--text')}>
+                  <div>number</div>
+                  <div>010-8108-5451</div>
+                </div>
+                <div className={hs('informations__about-me--text')}>
+                  <div>mail</div>
+                  <div>coldair426@gmail.com</div>
+                </div>
+                <div className={hs('informations__about-me--text')}>
+                  <div>벨로그</div>
+                  <div>www.velog.ddd</div>
+                </div>
+                <div className={hs('informations__about-me--text')}>
+                  <div>깃헙</div>
+                  <div>www.github.dd</div>
+                </div>
+              </div>
             </div>
-            <div>
-              <div>생년월일</div>
-              <div>96.04.26</div>
-            </div>
-            <div>
-              <div>카카오톡</div>
-              <div>오픈챗팅링크</div>
-            </div>
-            <div>벨로그</div>
-            <div>깃헙</div>
-            <div>
-              <div>메일</div>
-              <div>coldair426@gmail.com</div>
-            </div>
-            <div>
-              <div>학력</div>
-              <div>강원대학교(춘천)</div>
-            </div>
-            <div>
-              <div>skills</div>
-              <div>JS React 등</div>
+            <div className={hs('informations__stacks')}>
+              <img src='https://img.shields.io/badge/VSCode-007ACC?logo=visual studio code' alt='vscode mark' />
+              <img src='https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white' alt='git mark' />
+              <img src='https://img.shields.io/badge/GitHub-181717?logo=github' alt='github mark' />
+              <img src='https://img.shields.io/badge/Firebase-FFCA28?logo=Firebase&logoColor=white' alt='firebase mark' />
+              <img src='https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white' alt='react mark' />
+              <img src='https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white' alt='Ts mark' />
+              <img src='https://img.shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=white' alt='JS mark' />
+              <img src='https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white' alt='Bootstrap mark' />
+              <img src='https://img.shields.io/badge/SASS-CC6699?logo=SASS&logoColor=white' alt='sass mark' />
+              <img src='https://img.shields.io/badge/CSS-1572B6?logo=CSS3&logoColor=1572B6&logoColor=white' alt='CSS mark' />
+              <img src='https://img.shields.io/badge/CSSModules-000000?logo=cssmodules&logoColor=white' alt='css module mark' />
+              <img src='https://img.shields.io/badge/HTML5-E34F26?logo=HTML5&logoColor=white' alt='HTML mark' />
             </div>
           </div>
         </article>
