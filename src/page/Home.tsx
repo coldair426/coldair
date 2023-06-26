@@ -771,20 +771,20 @@ function Home({
               <div className={hs('informations__about-me--texts')}>
                 <div>홍찬기</div>
                 <div className={hs('informations__about-me--text')}>
-                  <div>number</div>
+                  <div>번호</div>
                   <div>010-8108-5451</div>
                 </div>
                 <div className={hs('informations__about-me--text')}>
-                  <div>mail</div>
+                  <div>메일</div>
                   <div>coldair426@gmail.com</div>
                 </div>
                 <div className={hs('informations__about-me--text')}>
                   <div>벨로그</div>
-                  <div>www.velog.ddd</div>
+                  <div>https://velog.io/@coldair426</div>
                 </div>
                 <div className={hs('informations__about-me--text')}>
-                  <div>깃헙</div>
-                  <div>www.github.dd</div>
+                  <div>깃허브</div>
+                  <div>https://github.com/coldair426</div>
                 </div>
               </div>
             </div>
