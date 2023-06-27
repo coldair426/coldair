@@ -189,7 +189,7 @@
     opacity: 0;
     transition: opacity 0.7s;
     transition-timing-function: ease;
-    padding-bottom: calc(65vh - 80px);
+    padding-bottom: 65vh;
     &.active {
       opacity: 1;
     }
@@ -411,8 +411,8 @@
 .home__informations {
   display: flex;
   justify-content: center;
-  padding-top: 80px;
-  padding-bottom: 400px;
+  padding-top: 15px;
+  padding-bottom: 300px;
   opacity: 0;
   transition: opacity 0.7s;
   transition-timing-function: ease;
@@ -427,38 +427,59 @@
     padding-top: 63px;
     .informations__about-me {
       display: flex;
-      justify-content: space-around;
+      // justify-content: space-between;
       align-items: center;
-      .informations__about-me--img {
-        height: 400px;
-      }
       .informations__about-me--texts {
-        margin-right: 30px;
+        margin-right: 110px;
+        margin-left: 95px;
         font-size: 20px;
-        // 홍찬기
-        > div:nth-child(1) {
-          font-size: 35px;
-          font-weight: 900;
-          letter-spacing: 10px;
-          margin-bottom: 20px;
-        }
         .informations__about-me--text {
           // 제목
           > div:nth-child(1) {
+            font-size: 25px;
             font-weight: 900;
-            letter-spacing: 4px;
+            letter-spacing: 2px;
             text-decoration: underline;
             text-underline-offset: 3px;
             margin-bottom: 10px;
+            color: $본문글씨;
           }
           // 내용
           > div:nth-child(2) {
-            color: $본문글씨;
+            font-size: 20px;
           }
         }
         .informations__about-me--text + .informations__about-me--text {
-          margin-top: 15px;
+          margin-top: 50px;
         }
+      }
+      .informations__about-me--img {
+        height: 400px;
+      }
+    }
+  }
+  .informations__stacks {
+    margin-top: 30px;
+    margin-left: 95px;
+    .informations__stacks--name {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin-bottom: 10px;
+      color: $본문글씨;
+    }
+    > div:nth-child(3) {
+      margin-top: 50px;
+    }
+    .informations__stack {
+      img + img {
+        margin-left: 5px;
+      }
+      img {
+        height: 25px;
+        opacity: 0.95;
       }
     }
   }

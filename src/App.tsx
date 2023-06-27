@@ -33,6 +33,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home windowInnerWidth={windowInnerWidth} setHomeOutlineBottom={setHomeOutlineBottom} setHomeProjectsBottom={setHomeProjectsBottom} />} />
       </Routes>
+      <footer></footer>
     </>
   );
 }
