@@ -168,7 +168,7 @@
         text-align: justify;
         word-break: normal;
         max-width: 85%;
-        font-size: 28px;
+        font-size: 25px;
         margin-top: 23px;
       }
       &.active {
@@ -260,12 +260,27 @@
         img {
           margin-top: 120px;
           width: 900px;
+          @include home-desktop {
+            margin-top: 90px;
+            width: 850px;
+          }
+          // @include home-tablet {
+          //   margin-top: 120px;
+          //   width: 900px;
+          // }
+          // @include home-mobile {
+          //   margin-top: 120px;
+          //   width: 900px;
+          // }
         }
       }
       .overview__links {
         display: flex;
         justify-content: center;
         margin-top: 30px;
+        @include home-desktop {
+          margin-top: 27px;
+        }
         a + a {
           margin-left: 25px;
         }
@@ -276,13 +291,23 @@
           font-weight: 900;
           border-radius: 20px;
           padding: 10px 15px 10px 15px;
+          @include home-desktop {
+            padding: 9px 14px 9px 14px;
+            font-size: 14px;
+          }
         }
       }
     }
     .roadmaps {
       margin-top: 150px;
+      @include home-desktop {
+        margin-top: 130px;
+      }
       div + div {
         margin-top: 18px;
+        @include home-desktop {
+          margin-top: 16px;
+        }
       }
       div {
         display: flex;
@@ -292,14 +317,25 @@
         letter-spacing: 1px;
         margin-left: 80px;
         color: $본문글씨;
+        @include home-desktop {
+          font-size: 22px;
+        }
         span {
           color: $제목글씨;
           margin-top: 15px;
           font-size: 25px;
+          @include home-desktop {
+            margin-top: 14px;
+            font-size: 24px;
+          }
         }
         img {
           height: 13px;
           margin-right: 10px;
+          @include home-desktop {
+            height: 12px;
+            margin-right: 9px;
+          }
         }
       }
     }
@@ -310,13 +346,22 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      @include home-desktop {
+        margin-top: 130px;
+      }
       .function {
         margin: 70px 0;
         width: 250px;
+        @include home-desktop {
+          margin: 60px 0;
+        }
         .function__title {
           font-weight: 900;
           font-size: 35px;
           letter-spacing: 2px;
+          @include home-desktop {
+            font-size: 33px;
+          }
         }
         .function__explanation {
           margin-top: 20px;
@@ -324,6 +369,11 @@
           font-size: 20px;
           letter-spacing: 1px;
           line-height: 30px;
+          @include home-desktop {
+            margin-top: 15px;
+            font-size: 18px;
+            line-height: 28px;
+          }
         }
       }
     }
@@ -335,14 +385,23 @@
       justify-content: center;
       align-items: center;
       margin-top: 150px;
+      @include home-desktop {
+        margin-top: 130px;
+      }
       img + img {
         margin-left: 30px;
       }
       :nth-child(1) {
         height: 350px;
+        @include home-desktop {
+          height: 300px;
+        }
       }
       img {
         height: 500px;
+        @include home-desktop {
+          height: 450px;
+        }
       }
     }
   }
@@ -352,11 +411,17 @@
         display: flex;
         justify-content: center;
         margin-top: 150px;
+        @include home-desktop {
+          margin-top: 130px;
+        }
         img + img {
           margin-left: 30px;
         }
         img {
           height: 500px;
+          @include home-desktop {
+            height: 450px;
+          }
         }
       }
     }
@@ -364,6 +429,9 @@
   .projects__siksunbi {
     .ssb__imgs {
       margin-top: 150px;
+      @include home-desktop {
+        margin-top: 130px;
+      }
       .ssb__imgs--wrapper {
         display: flex;
         justify-content: center;
@@ -372,6 +440,9 @@
         }
         img {
           height: 500px;
+          @include home-desktop {
+            height: 450px;
+          }
         }
       }
     }
@@ -379,6 +450,9 @@
   .projects__hosaroun {
     .hosaroun__imgs {
       margin-top: 150px;
+      @include home-desktop {
+        margin-top: 130px;
+      }
       .hosaroun__imgs--desktop {
         .hosaroun__imgs--desktop-wrapper {
           display: flex;
@@ -388,11 +462,17 @@
           }
           img {
             height: 350px;
+            @include home-desktop {
+              height: 300px;
+            }
           }
         }
       }
       .hosaroun__imgs--mobile {
         margin-top: 80px;
+        @include home-desktop {
+          margin-top: 60px;
+        }
         .hosaroun__imgs--mobile-wrapper {
           display: flex;
           justify-content: center;
@@ -401,6 +481,9 @@
           }
           img {
             height: 500px;
+            @include home-desktop {
+              height: 450px;
+            }
           }
         }
       }
