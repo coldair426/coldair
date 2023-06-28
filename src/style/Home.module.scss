@@ -213,7 +213,8 @@
         letter-spacing: 3px;
       }
       @include home-mobile {
-        top: 63px;
+        top: 68px;
+        margin-left: 5px;
       }
       img {
         margin-right: 10px;
@@ -244,17 +245,30 @@
           margin-top: 5px;
           font-size: 15px;
         }
+        @include home-mobile {
+          margin-top: 5px;
+          margin-left: 50px;
+        }
       }
       .overview__stacks {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         margin-top: 13px;
         margin-left: 55px;
         @include home-tablet {
           margin-top: 8px;
         }
+        @include home-mobile {
+          margin-top: 0px;
+          margin-left: 50px;
+          margin-right: 20px;
+        }
         img + img {
           margin-left: 4px;
+          @include home-mobile {
+            margin-left: 0px;
+          }
         }
         img {
           height: 22px;
@@ -262,12 +276,19 @@
           @include home-tablet {
             height: 19px;
           }
+          @include home-mobile {
+            margin-right: 5px;
+            margin-top: 7px;
+          }
         }
       }
       .overview__team {
         margin-top: 10px;
         @include home-tablet {
           margin-top: 8px;
+        }
+        @include home-mobile {
+          margin-top: 5px;
         }
         .overview__member {
           margin-left: 55px;
@@ -279,6 +300,9 @@
           @include home-tablet {
             font-size: 19px;
             margin-right: 25px;
+          }
+          @include home-mobile {
+            margin-right: 20px;
           }
         }
       }
@@ -297,10 +321,14 @@
             margin-top: 60px;
             width: 650px;
           }
+          @include home-mobile {
+            width: 90%;
+          }
         }
       }
       .overview__links {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         margin-top: 30px;
         @include home-desktop {
@@ -309,8 +337,14 @@
         @include home-tablet {
           margin-top: 15px;
         }
+        @include home-mobile {
+          margin-top: 10px;
+        }
         a + a {
           margin-left: 25px;
+          @include home-mobile {
+            margin-left: 0px;
+          }
         }
         div {
           opacity: 0.9;
@@ -324,8 +358,12 @@
             font-size: 14px;
           }
           @include home-tablet {
-            padding: 9px 14px 9px 14px;
             font-size: 13px;
+          }
+          @include home-mobile {
+            padding: 9px 14px 9px 14px;
+            margin: 5px;
+            font-size: 10px;
           }
         }
       }
@@ -337,6 +375,9 @@
       }
       @include home-tablet {
         margin-top: 100px;
+      }
+      @include home-mobile {
+        margin-top: 70px;
       }
       div + div {
         margin-top: 18px;
@@ -362,6 +403,11 @@
           font-size: 20px;
           margin-left: 55px;
         }
+        @include home-mobile {
+          font-size: 17px;
+          margin-left: 25px;
+          margin-right: 15px;
+        }
         span {
           color: $제목글씨;
           margin-top: 15px;
@@ -373,6 +419,9 @@
           @include home-tablet {
             margin-top: 12px;
             font-size: 22px;
+          }
+          @include home-mobile {
+            font-size: 20px;
           }
         }
         img {
@@ -462,9 +511,16 @@
           margin-left: 30px;
           margin-top: 30px;
         }
+        @include home-mobile {
+          margin-left: 0px;
+        }
       }
       :nth-child(1) {
         height: 350px;
+        @include home-mobile {
+          width: 80%;
+          height: auto;
+        }
       }
       img {
         height: 500px;
@@ -473,6 +529,10 @@
         }
         @include home-tablet {
           height: 550px;
+        }
+        @include home-mobile {
+          width: 70%;
+          height: auto;
         }
       }
     }
@@ -504,6 +564,10 @@
           @include home-tablet {
             height: 550px;
             padding: 15px;
+          }
+          @include home-mobile {
+            width: 70%;
+            height: auto;
           }
         }
       }
@@ -539,6 +603,10 @@
             height: 550px;
             padding: 15px;
           }
+          @include home-mobile {
+            width: 70%;
+            height: auto;
+          }
         }
       }
     }
@@ -571,6 +639,10 @@
             @include home-desktop {
               height: 300px;
             }
+            @include home-mobile {
+              width: 80%;
+              height: auto;
+            }
           }
         }
       }
@@ -578,6 +650,9 @@
         margin-top: 80px;
         @include home-desktop {
           margin-top: 60px;
+        }
+        @include home-mobile {
+          margin-top: 30px;
         }
         .hosaroun__imgs--mobile-wrapper {
           display: flex;
@@ -599,6 +674,10 @@
             @include home-tablet {
               height: 550px;
               padding: 15px;
+            }
+            @include home-mobile {
+              width: 70%;
+              height: auto;
             }
           }
         }
@@ -629,6 +708,10 @@
     width: 100%;
     max-width: 980px;
     padding-top: 63px;
+    @include home-mobile {
+      align-items: baseline;
+      margin-left: 20px;
+    }
     .informations__about-me {
       display: flex;
       align-items: center;
@@ -636,6 +719,9 @@
         margin-right: 110px;
         @include home-tablet {
           margin-right: 70px;
+        }
+        @include home-mobile {
+          margin-right: 0px;
         }
         .informations__about-me--text {
           // 제목
@@ -671,6 +757,10 @@
         @include home-tablet {
           height: 350px;
         }
+        @include home-mobile {
+          visibility: hidden;
+          height: 0px;
+        }
       }
     }
   }
@@ -679,6 +769,12 @@
     width: 779px;
     @include home-tablet {
       width: 662px;
+    }
+    @include home-mobile {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
     }
     .informations__stacks--name {
       font-size: 25px;
@@ -701,12 +797,18 @@
     .informations__stack {
       img + img {
         margin-left: 5px;
+        @include home-mobile {
+          margin-left: 0px;
+        }
       }
       img {
         height: 25px;
         opacity: 0.95;
         @include home-tablet {
           height: 20px;
+        }
+        @include home-mobile {
+          margin-right: 5px;
         }
       }
     }
