@@ -329,7 +329,7 @@ function Home({
               <div className={hs('overview__team')}>
                 <div className={hs('overview__member')}>
                   이 프로젝트는 프론트엔드(1명)와 백엔드(1명)로 총 2명으로 구성된 팀으로 진행되었으며, 저는 프론트엔드 포지션으로 참여하였습니다.{' '}
-                  <u>실제 운영 중인 서비스입니다.</u>
+                  <u style={{ textUnderlineOffset: '3px' }}>실제 운영 중인 서비스입니다.</u>
                 </div>
               </div>
               <div className={hs('overview__objective')}>
@@ -599,7 +599,7 @@ function Home({
               </div>
               <div className={hs('overview__team')}>
                 <div className={hs('overview__member')}>
-                  서비스를 Vanilla JS에서 React로 리팩토링 하였습니다. <u>실제 운영 중인 서비스입니다.</u>
+                  서비스를 Vanilla JS에서 React로 리팩토링 하였습니다. <u style={{ textUnderlineOffset: '3px' }}>실제 운영 중인 서비스입니다.</u>
                 </div>
               </div>
               <div className={hs('overview__objective')}>
