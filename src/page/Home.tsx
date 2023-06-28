@@ -73,7 +73,7 @@ function Home({
           setProjectsSiksunbiStyle(undefined);
           setProjectsHosarounStyle(undefined);
           setHomeInformationsStyle(undefined);
-        } else if (userScrollY >= 1200 && userScrollY < 1600 + 800 - window.innerHeight + 400) {
+        } else if (userScrollY >= 1200 && userScrollY < 1600 + 1300 - window.innerHeight + 400) {
           setOutlineProfileImgStyle('active-three');
           setOutlineProfileNameStyle('active-two');
           setOutlineMantraTitleStyle('active');
@@ -83,7 +83,7 @@ function Home({
           setProjectsSiksunbiStyle(undefined);
           setProjectsHosarounStyle(undefined);
           setHomeInformationsStyle(undefined);
-        } else if (userScrollY >= 1600 + 800 - window.innerHeight + 400 && userScrollY < projectsPortfolioRef.current.offsetTop - 10) {
+        } else if (userScrollY >= 1600 + 1300 - window.innerHeight + 400 && userScrollY < projectsPortfolioRef.current.offsetTop - 10) {
           setOutlineProfileImgStyle('active-three');
           setOutlineProfileNameStyle('active-three');
           setOutlineMantraTitleStyle(undefined);
