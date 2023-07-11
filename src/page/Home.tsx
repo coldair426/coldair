@@ -227,7 +227,7 @@ function Home({
               포트폴리오<span>(개인프로젝트)</span>
             </h1>
             <div className={hs('overview')}>
-              <div className={hs('overview__period')}>(23.05.28 ~ )</div>
+              <div className={hs('overview__period')}>(23.05.28 ~ 23.06.29)</div>
               <div className={hs('overview__stacks')}>
                 <img src='https://img.shields.io/badge/VSCode-007ACC?logo=visual studio code' alt='vscode mark' />
                 <img src='https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white' alt='git mark' />
