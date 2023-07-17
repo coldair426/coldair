@@ -400,13 +400,25 @@ function Home({
                 <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
                 Router(react-router-dom)
               </div>
+              <div>
+                <img src='/icon/breadkun-check-mark.webp' alt='check mark' />
+                반응형 웹(Responsive Web)
+              </div>
             </div>
             <div className={hs('breadkun__imgs')}>
-              <div className={hs('breadkun__imgs--wrapper')}>
-                <img src='/img/breadkun-1.webp' alt='breadkunn main page' />
-                <img src='/img/breadkun-2.webp' alt='breadkunn meal page' />
-                <img src='/img/breadkun-3.webp' alt='breadkunn bus page' />
-                <img src='/img/breadkun-5.webp' alt='breadkunn bus page' />
+              <div className={hs('breadkun__imgs--desktop')}>
+                <div className={hs('breadkun__imgs--desktop-wrapper')}>
+                  <img src='/img/breadkun-1-pc.webp' alt='breadkunn main page' />
+                  <img src='/img/breadkun-2-pc.webp' alt='breadkunn meal page' />
+                </div>
+              </div>
+              <div className={hs('breadkun__imgs--mobile')}>
+                <div className={hs('breadkun__imgs--mobile-wrapper')}>
+                  <img src='/img/breadkun-1.webp' alt='breadkunn main page' />
+                  <img src='/img/breadkun-2.webp' alt='breadkunn meal page' />
+                  <img src='/img/breadkun-3.webp' alt='breadkunn bus page' />
+                  <img src='/img/breadkun-5.webp' alt='breadkunn bus page' />
+                </div>
               </div>
             </div>
             <div className={hs('main-functions')} style={{ backgroundColor: '#7D2020' }}>
@@ -440,7 +452,7 @@ function Home({
                   통근 버스
                 </div>
                 <div className={hs('function__explanation')} style={{ color: '#a1a1a6' }}>
-                  더존비즈온 통근 버스 정보를 제공합니다. 특정 버스 노선의 정류장 위치, 실시간 도착 예정 시간을 확인할 수 있어 교통 계획을 효율적으로 조정할 수 있습니다.
+                  더존ICT 통근 버스 정보를 제공합니다. 특정 버스 노선의 정류장 위치, 실시간 도착 예정 시간을 확인할 수 있어 교통 계획을 효율적으로 조정할 수 있습니다.
                 </div>
               </div>
               <div className={hs('function')}>
@@ -448,7 +460,7 @@ function Home({
                   식단
                 </div>
                 <div className={hs('function__explanation')} style={{ color: '#a1a1a6' }}>
-                  더존비즈온 구내식당과 사내베이커리의 다양한 식단을 빠르고 간편하게 확인할 수 있어 건강한 식사 계획을 세우기에 효과적입니다.
+                  더존ICT 구내식당과 사내베이커리의 다양한 식단을 빠르고 간편하게 확인할 수 있어 건강한 식사 계획을 세우기에 효과적입니다.
                 </div>
               </div>
               <div className={hs('function')}>
@@ -456,10 +468,20 @@ function Home({
                   대시보드
                 </div>
                 <div className={hs('function__explanation')} style={{ color: '#a1a1a6' }}>
-                  대시보드에는 더존비즈온 회사 위치 기반의 날씨와 미세먼지 농도 정보가 표시됩니다. 또한, 자주 이용하는 기능에 빠르게 액세스할 수 있는 단축 아이콘을 제공하여
-                  편의성을 최대화합니다.
+                  대시보드에는 더존ICT 회사 위치 기반의 날씨와 미세먼지 농도 정보가 표시됩니다. 또한, 자주 이용하는 기능에 빠르게 액세스할 수 있는 단축 아이콘을 제공하여 편의성을
+                  최대화합니다.
                 </div>
               </div>
+              <div className={hs('function')}>
+                <div className={hs('function__title')} style={{ color: '#ECECEB' }}>
+                  반응형 웹
+                </div>
+                <div className={hs('function__explanation')} style={{ color: '#a1a1a6' }}>
+                  다양한 디바이스와 화면 크기에서 최적의 사용자 경험을 제공합니다. 데스크톱, 태블릿, 스마트폰 등 다양한 환경에서 편리하게 이용할 수 있습니다.
+                </div>
+              </div>
+              <div className={hs('function')} style={{ height: '0px', margin: '0px' }}></div>
+              <div className={hs('function')} style={{ height: '0px', margin: '0px' }}></div>
             </div>
           </article>
           <article className={hs('projects__siksunbi', projectsSiksunbiStyle)} ref={projectsSiksunbiRef}>
@@ -753,10 +775,7 @@ function Home({
                   캐로셀 슬라이더를 이용해 다양한 사진을 효과적으로 제공합니다.
                 </div>
               </div>
-              <div className={hs('function')}>
-                <div className={hs('function__title')} style={{ color: '#000000' }}></div>
-                <div className={hs('function__explanation')} style={{ color: '#31334b' }}></div>
-              </div>
+              <div className={hs('function')} style={{ height: '0px', margin: '0px' }}></div>
             </div>
           </article>
         </article>

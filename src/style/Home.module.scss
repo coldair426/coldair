@@ -558,35 +558,72 @@
   }
   .projects__breadkun {
     .breadkun__imgs {
-      .breadkun__imgs--wrapper {
-        display: flex;
-        justify-content: center;
-        margin-top: 150px;
+      margin-top: 150px;
+      @include home-desktop {
+        margin-top: 130px;
+      }
+      @include home-tablet {
+        margin-top: 100px;
+      }
+      .breadkun__imgs--desktop {
+        .breadkun__imgs--desktop-wrapper {
+          display: flex;
+          justify-content: center;
+          @include home-tablet {
+            flex-wrap: wrap;
+          }
+          img + img {
+            margin-left: 30px;
+            @include home-tablet {
+              margin-left: 0px;
+              margin-top: 30px;
+            }
+          }
+          img {
+            height: 350px;
+            @include home-desktop {
+              height: 300px;
+            }
+            @include home-mobile {
+              width: 80%;
+              height: auto;
+            }
+          }
+        }
+      }
+      .breadkun__imgs--mobile {
+        margin-top: 80px;
         @include home-desktop {
-          margin-top: 130px;
+          margin-top: 60px;
         }
-        @include home-tablet {
-          flex-wrap: wrap;
-          margin-top: 100px;
+        @include home-mobile {
+          margin-top: 30px;
         }
-        img + img {
-          margin-left: 30px;
+        .breadkun__imgs--mobile-wrapper {
+          display: flex;
+          justify-content: center;
           @include home-tablet {
-            margin-left: 0px;
+            flex-wrap: wrap;
           }
-        }
-        img {
-          height: 500px;
-          @include home-desktop {
-            height: 450px;
+          img + img {
+            margin-left: 30px;
+            @include home-tablet {
+              margin-left: 0px;
+            }
           }
-          @include home-tablet {
-            height: 550px;
-            padding: 15px;
-          }
-          @include home-mobile {
-            width: 70%;
-            height: auto;
+          img {
+            height: 500px;
+            @include home-desktop {
+              height: 450px;
+            }
+            @include home-tablet {
+              height: 550px;
+              padding: 15px;
+            }
+            @include home-mobile {
+              width: 70%;
+              height: auto;
+            }
           }
         }
       }
